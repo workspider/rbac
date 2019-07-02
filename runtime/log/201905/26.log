@@ -1,0 +1,114 @@
+---------------------------------------------------------------
+[ 2019-05-26T08:00:01+08:00 ] 172.16.101.22 GET 172.16.101.22/home/login/logins?username=cmlaw_renxiaoman&password=%21cmlaw0
+[运行时间：0.090531s] [吞吐率：11.05req/s] [内存消耗：1,422.38kb] [文件加载：79]
+[ info ] [ LANG ] /var/www/manager_cmlaw/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => '172.16.101.22',
+  'accept' => '*/*',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'cmlaw_renxiaoman',
+  'password' => '!cmlaw0',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002302s ] mysql:host=172.16.101.20;port=3306;dbname=lawyer_cmlaw;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_dangan` [ RunTime:0.001242s ]
+[ sql ] [ SQL ] SELECT * FROM `user_dangan` WHERE (  ( `login_name` = 'renxiaoman' OR `user_phone` = 'renxiaoman' OR `user_email` = 'renxiaoman' ) ) AND `user_dangan`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.001100s ]
+---------------------------------------------------------------
+[ 2019-05-26T08:00:01+08:00 ] 172.16.101.22 GET 172.16.101.22/api/Load?aaaa=1
+[运行时间：0.018017s] [吞吐率：55.50req/s] [内存消耗：1,099.24kb] [文件加载：75]
+[ info ] [ LANG ] /var/www/manager_cmlaw/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'api/Load',
+  'route' => 'api/load/index',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'method' => 'get|post',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '172.16.101.22',
+  'accept' => '*/*',
+)
+[ info ] [ PARAM ] array (
+  'aaaa' => '1',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001434s ] mysql:host=172.16.101.20;port=3306;dbname=lawyer_cmlaw;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jishi` [ RunTime:0.001166s ]
+[ sql ] [ SQL ] SELECT * FROM `jishi` WHERE (  `jishi_status` = 1  AND `jishi_jiezhi_date` <= '2019-05-26' ) AND `jishi`.`delete_time` IS NULL [ RunTime:0.000991s ]
+---------------------------------------------------------------
+[ 2019-05-26T08:00:01+08:00 ] 172.16.101.22 GET 172.16.101.22/api/load.lichong/?aaaa=1
+[运行时间：0.014836s] [吞吐率：67.40req/s] [内存消耗：1,034.08kb] [文件加载：75]
+[ info ] [ LANG ] /var/www/manager_cmlaw/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'api/load.lichong',
+  'route' => 'api/load/lichong',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'method' => 'get|post',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '172.16.101.22',
+  'accept' => '*/*',
+)
+[ info ] [ PARAM ] array (
+  'aaaa' => '1',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001216s ] mysql:host=172.16.101.20;port=3306;dbname=lawyer_cmlaw;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `lichong` [ RunTime:0.001360s ]
+[ sql ] [ SQL ] SELECT * FROM `lichong` WHERE (  `lichong_status` = 1  AND `gongshijieshu_time` <= '2019-05-26' ) AND `lichong`.`delete_time` IS NULL [ RunTime:0.001335s ]
+---------------------------------------------------------------
+[ 2019-05-26T08:00:01+08:00 ] 172.16.101.22 GET 172.16.101.22/api/load.sum/?aaaa=1
+[运行时间：0.044830s] [吞吐率：22.31req/s] [内存消耗：1,085.61kb] [文件加载：76]
+[ info ] [ LANG ] /var/www/manager_cmlaw/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'api/load.sum',
+  'route' => 'api/load/sum',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'method' => 'get|post',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '172.16.101.22',
+  'accept' => '*/*',
+)
+[ info ] [ PARAM ] array (
+  'aaaa' => '1',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001384s ] mysql:host=172.16.101.20;port=3306;dbname=lawyer_cmlaw;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fensuo` [ RunTime:0.000996s ]
+[ sql ] [ SQL ] SELECT * FROM `fensuo` WHERE (  `fensuo_delete` = 0 ) AND `fensuo`.`delete_time` IS NULL [ RunTime:0.000760s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.001197s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `user` WHERE (  `fensuoid` = 1 ) AND `user`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.000621s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `user` WHERE (  `fensuoid` = 2 ) AND `user`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.000568s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `user` WHERE (  `fensuoid` = 3 ) AND `user`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.000559s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `user` WHERE (  `fensuoid` = 4 ) AND `user`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.000540s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `user` WHERE (  `fensuoid` = 5 ) AND `user`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.000575s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `user` WHERE (  `fensuoid` = 13 ) AND `user`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.000629s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `user` WHERE (  `fensuoid` = 14 ) AND `user`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.000567s ]
+[ sql ] [ SQL ] UPDATE `fensuo`  SET `sum` = 19 , `update_time` = '2019-05-26 08:00:01.542158'  WHERE (  `idfensuo` = 1 ) AND `fensuo`.`delete_time` IS NULL [ RunTime:0.013666s ]
+[ sql ] [ SQL ] UPDATE `fensuo`  SET `sum` = 26 , `update_time` = '2019-05-26 08:00:01.556239'  WHERE (  `idfensuo` = 2 ) AND `fensuo`.`delete_time` IS NULL [ RunTime:0.000652s ]
+[ sql ] [ SQL ] UPDATE `fensuo`  SET `sum` = 1 , `update_time` = '2019-05-26 08:00:01.557352'  WHERE (  `idfensuo` = 3 ) AND `fensuo`.`delete_time` IS NULL [ RunTime:0.000644s ]
+[ sql ] [ SQL ] UPDATE `fensuo`  SET `sum` = 0 , `update_time` = '2019-05-26 08:00:01.558387'  WHERE (  `idfensuo` = 4 ) AND `fensuo`.`delete_time` IS NULL [ RunTime:0.000637s ]
+[ sql ] [ SQL ] UPDATE `fensuo`  SET `sum` = 0 , `update_time` = '2019-05-26 08:00:01.559443'  WHERE (  `idfensuo` = 5 ) AND `fensuo`.`delete_time` IS NULL [ RunTime:0.000649s ]
+[ sql ] [ SQL ] UPDATE `fensuo`  SET `sum` = 1 , `update_time` = '2019-05-26 08:00:01.560509'  WHERE (  `idfensuo` = 13 ) AND `fensuo`.`delete_time` IS NULL [ RunTime:0.000655s ]
+[ sql ] [ SQL ] UPDATE `fensuo`  SET `sum` = 0 , `update_time` = '2019-05-26 08:00:01.561618'  WHERE (  `idfensuo` = 14 ) AND `fensuo`.`delete_time` IS NULL [ RunTime:0.000652s ]

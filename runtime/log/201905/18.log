@@ -1,0 +1,1838 @@
+---------------------------------------------------------------
+[ 2019-05-18T08:00:02+08:00 ] 172.16.101.22 GET 172.16.101.22/home/login/logins?username=cmlaw_renxiaoman&password=%21cmlaw0
+[运行时间：0.828170s] [吞吐率：1.21req/s] [内存消耗：1,420.95kb] [文件加载：80]
+[ info ] [ LANG ] /var/www/manager_cmlaw/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => '172.16.101.22',
+  'accept' => '*/*',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'cmlaw_renxiaoman',
+  'password' => '!cmlaw0',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002097s ] mysql:host=172.16.101.20;port=3306;dbname=lawyer_cmlaw;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_dangan` [ RunTime:0.001705s ]
+[ sql ] [ SQL ] SELECT * FROM `user_dangan` WHERE (  ( `login_name` = 'renxiaoman' OR `user_phone` = 'renxiaoman' OR `user_email` = 'renxiaoman' ) ) AND `user_dangan`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.001197s ]
+---------------------------------------------------------------
+[ 2019-05-18T08:00:02+08:00 ] 172.16.101.22 GET 172.16.101.22/api/Load?aaaa=1
+[运行时间：0.071006s] [吞吐率：14.08req/s] [内存消耗：1,097.98kb] [文件加载：76]
+[ info ] [ LANG ] /var/www/manager_cmlaw/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'api/Load',
+  'route' => 'api/load/index',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'method' => 'get|post',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '172.16.101.22',
+  'accept' => '*/*',
+)
+[ info ] [ PARAM ] array (
+  'aaaa' => '1',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001610s ] mysql:host=172.16.101.20;port=3306;dbname=lawyer_cmlaw;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jishi` [ RunTime:0.001501s ]
+[ sql ] [ SQL ] SELECT * FROM `jishi` WHERE (  `jishi_status` = 1  AND `jishi_jiezhi_date` <= '2019-05-18' ) AND `jishi`.`delete_time` IS NULL [ RunTime:0.001287s ]
+---------------------------------------------------------------
+[ 2019-05-18T08:00:02+08:00 ] 172.16.101.22 GET 172.16.101.22/api/load.lichong/?aaaa=1
+[运行时间：0.027675s] [吞吐率：36.13req/s] [内存消耗：1,032.81kb] [文件加载：76]
+[ info ] [ LANG ] /var/www/manager_cmlaw/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'api/load.lichong',
+  'route' => 'api/load/lichong',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'method' => 'get|post',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '172.16.101.22',
+  'accept' => '*/*',
+)
+[ info ] [ PARAM ] array (
+  'aaaa' => '1',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001304s ] mysql:host=172.16.101.20;port=3306;dbname=lawyer_cmlaw;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `lichong` [ RunTime:0.001857s ]
+[ sql ] [ SQL ] SELECT * FROM `lichong` WHERE (  `lichong_status` = 1  AND `gongshijieshu_time` <= '2019-05-18' ) AND `lichong`.`delete_time` IS NULL [ RunTime:0.001137s ]
+---------------------------------------------------------------
+[ 2019-05-18T08:00:02+08:00 ] 172.16.101.22 GET 172.16.101.22/api/load.sum/?aaaa=1
+[运行时间：0.064307s] [吞吐率：15.55req/s] [内存消耗：1,084.34kb] [文件加载：77]
+[ info ] [ LANG ] /var/www/manager_cmlaw/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'api/load.sum',
+  'route' => 'api/load/sum',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'method' => 'get|post',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '172.16.101.22',
+  'accept' => '*/*',
+)
+[ info ] [ PARAM ] array (
+  'aaaa' => '1',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001203s ] mysql:host=172.16.101.20;port=3306;dbname=lawyer_cmlaw;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fensuo` [ RunTime:0.001224s ]
+[ sql ] [ SQL ] SELECT * FROM `fensuo` WHERE (  `fensuo_delete` = 0 ) AND `fensuo`.`delete_time` IS NULL [ RunTime:0.000844s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.001510s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `user` WHERE (  `fensuoid` = 1 ) AND `user`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.000725s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `user` WHERE (  `fensuoid` = 2 ) AND `user`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.000647s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `user` WHERE (  `fensuoid` = 3 ) AND `user`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.000650s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `user` WHERE (  `fensuoid` = 4 ) AND `user`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.000682s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `user` WHERE (  `fensuoid` = 5 ) AND `user`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.000667s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `user` WHERE (  `fensuoid` = 13 ) AND `user`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.000646s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `user` WHERE (  `fensuoid` = 14 ) AND `user`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.000670s ]
+[ sql ] [ SQL ] UPDATE `fensuo`  SET `sum` = 19 , `update_time` = '2019-05-18 08:00:02.863549'  WHERE (  `idfensuo` = 1 ) AND `fensuo`.`delete_time` IS NULL [ RunTime:0.000811s ]
+[ sql ] [ SQL ] UPDATE `fensuo`  SET `sum` = 26 , `update_time` = '2019-05-18 08:00:02.881048'  WHERE (  `idfensuo` = 2 ) AND `fensuo`.`delete_time` IS NULL [ RunTime:0.000601s ]
+[ sql ] [ SQL ] UPDATE `fensuo`  SET `sum` = 1 , `update_time` = '2019-05-18 08:00:02.882070'  WHERE (  `idfensuo` = 3 ) AND `fensuo`.`delete_time` IS NULL [ RunTime:0.000614s ]
+[ sql ] [ SQL ] UPDATE `fensuo`  SET `sum` = 0 , `update_time` = '2019-05-18 08:00:02.883094'  WHERE (  `idfensuo` = 4 ) AND `fensuo`.`delete_time` IS NULL [ RunTime:0.000594s ]
+[ sql ] [ SQL ] UPDATE `fensuo`  SET `sum` = 0 , `update_time` = '2019-05-18 08:00:02.884104'  WHERE (  `idfensuo` = 5 ) AND `fensuo`.`delete_time` IS NULL [ RunTime:0.000663s ]
+[ sql ] [ SQL ] UPDATE `fensuo`  SET `sum` = 1 , `update_time` = '2019-05-18 08:00:02.885172'  WHERE (  `idfensuo` = 13 ) AND `fensuo`.`delete_time` IS NULL [ RunTime:0.000608s ]
+[ sql ] [ SQL ] UPDATE `fensuo`  SET `sum` = 0 , `update_time` = '2019-05-18 08:00:02.886183'  WHERE (  `idfensuo` = 14 ) AND `fensuo`.`delete_time` IS NULL [ RunTime:0.001203s ]
+---------------------------------------------------------------
+[ 2019-05-18T10:01:55+08:00 ] 192.168.101.137 GET 172.16.101.22/
+[运行时间：0.190609s] [吞吐率：5.25req/s] [内存消耗：1,156.47kb] [文件加载：86]
+[ info ] [ LANG ] /var/www/manager_cmlaw/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => '172.16.101.22',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001642s ] mysql:host=172.16.101.20;port=3306;dbname=lawyer_cmlaw;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.001473s ]
+[ sql ] [ SQL ] SELECT `groupid` FROM `auth_group_access` WHERE (  `userid` IS NULL ) AND `auth_group_access`.`delete_time` IS NULL [ RunTime:0.000577s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group` [ RunTime:0.001041s ]
+[ sql ] [ SQL ] SELECT `rules` FROM `auth_group` WHERE (  `id` IN ('') ) AND `auth_group`.`delete_time` IS NULL [ RunTime:0.000608s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_rule` [ RunTime:0.001133s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_rule` WHERE  `id` IN (0)  AND `ruleid` = 0  AND `type` = 1 ORDER BY `paixun` DESC [ RunTime:0.000750s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_rule` WHERE  `id` IN (0)  AND `title` = 'index/index' LIMIT 1 [ RunTime:0.000698s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_rule` WHERE  `id` IN (0)  AND `ruleid` IS NULL  AND `type` = 1 ORDER BY `paixun` DESC [ RunTime:0.000669s ]
+---------------------------------------------------------------
+[ 2019-05-18T10:01:55+08:00 ] 192.168.101.137 GET 172.16.101.22/home/login/
+[运行时间：0.022873s] [吞吐率：43.72req/s] [内存消耗：771.34kb] [文件加载：64]
+[ info ] [ LANG ] /var/www/manager_cmlaw/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => '172.16.101.22',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=0uu02npet89l4cae06211jr9ap',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] /var/www/manager_cmlaw/application/home/view/login/login-1.html [ array (
+) ]
+---------------------------------------------------------------
+[ 2019-05-18T10:01:57+08:00 ] 192.168.101.137 POST 172.16.101.22/home/login/logins/
+[运行时间：0.009144s] [吞吐率：109.36req/s] [内存消耗：1,089.17kb] [文件加载：80]
+[ info ] [ LANG ] /var/www/manager_cmlaw/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => '172.16.101.22',
+  'connection' => 'keep-alive',
+  'content-length' => '42',
+  'accept' => '*/*',
+  'origin' => 'http://172.16.101.22',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://172.16.101.22/home/login/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=0uu02npet89l4cae06211jr9ap',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'cmlaw_renxiaoman',
+  'password' => '!cmlaw0',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001148s ] mysql:host=172.16.101.20;port=3306;dbname=lawyer_cmlaw;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_dangan` [ RunTime:0.001422s ]
+[ sql ] [ SQL ] SELECT * FROM `user_dangan` WHERE (  ( `login_name` = 'renxiaoman' OR `user_phone` = 'renxiaoman' OR `user_email` = 'renxiaoman' ) ) AND `user_dangan`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.001134s ]
+---------------------------------------------------------------
+[ 2019-05-18T10:01:57+08:00 ] 192.168.101.137 GET 172.16.101.22/home/index/index
+[运行时间：0.108066s] [吞吐率：9.25req/s] [内存消耗：1,267.70kb] [文件加载：90]
+[ info ] [ LANG ] /var/www/manager_cmlaw/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => '172.16.101.22',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'referer' => 'http://172.16.101.22/home/login/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=0uu02npet89l4cae06211jr9ap; USERID=4; USERREALNAME=%E4%BB%BB%E5%B0%8F%E6%9B%BC',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /var/www/manager_cmlaw/application/home/view/index/index.html [ array (
+  0 => 'config',
+  1 => 'menu',
+  2 => 'system',
+  3 => 'data',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001334s ] mysql:host=172.16.101.20;port=3306;dbname=lawyer_cmlaw;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.001177s ]
+[ sql ] [ SQL ] SELECT `groupid` FROM `auth_group_access` WHERE (  `userid` = 4 ) AND `auth_group_access`.`delete_time` IS NULL [ RunTime:0.000812s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group` [ RunTime:0.000907s ]
+[ sql ] [ SQL ] SELECT `rules` FROM `auth_group` WHERE (  `id` IN (174) ) AND `auth_group`.`delete_time` IS NULL [ RunTime:0.000563s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_rule` [ RunTime:0.000918s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_rule` WHERE  `id` IN (9,10,11,22,23,97,99,134,138,139,135,136,137,15,115,141,117,118,119,156,124,125,120,121,122,142,143,144,145,146,147,123,148,126,127,149,150,128,151,129,130,152,131,132,140,133,153,154,155,157,159,160,161,162,163,158,164,165,166,167,168)  AND `ruleid` = 0  AND `type` = 1 ORDER BY `paixun` DESC [ RunTime:0.001085s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_rule` WHERE  `id` IN (9,10,11,22,23,97,99,134,138,139,135,136,137,15,115,141,117,118,119,156,124,125,120,121,122,142,143,144,145,146,147,123,148,126,127,149,150,128,151,129,130,152,131,132,140,133,153,154,155,157,159,160,161,162,163,158,164,165,166,167,168)  AND `title` = 'index/index' LIMIT 1 [ RunTime:0.000907s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_rule` WHERE  `id` IN (9,10,11,22,23,97,99,134,138,139,135,136,137,15,115,141,117,118,119,156,124,125,120,121,122,142,143,144,145,146,147,123,148,126,127,149,150,128,151,129,130,152,131,132,140,133,153,154,155,157,159,160,161,162,163,158,164,165,166,167,168)  AND `ruleid` = 131  AND `type` = 1 ORDER BY `paixun` DESC [ RunTime:0.000964s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_view` [ RunTime:0.001966s ]
+[ sql ] [ SQL ] SELECT * FROM `user_view` WHERE (  `iduser` = 4 ) AND `user_view`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.001460s ]
+[ sql ] [ SQL ] SELECT * FROM `user_view` WHERE (  `iduser` = 4 ) AND `user_view`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.001299s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `anjian_user_view` [ RunTime:0.001829s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `anjian_user_view` WHERE (  `iduser` = 4 ) AND `anjian_user_view`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.002249s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `kehu` [ RunTime:0.001384s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `kehu` WHERE `kehu`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.000682s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `work` [ RunTime:0.001210s ]
+[ sql ] [ SQL ] SELECT SUM(`work_unit`) AS tp_sum FROM `work` WHERE (  `userid` = 4  AND `work_end_date` LIKE '2019-05-18%' ) AND `work`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.000704s ]
+[ sql ] [ SQL ] SELECT SUM(`work_unit`) AS tp_sum FROM `work` WHERE (  `userid` = 4  AND `work_end_date` LIKE '2019-05%' ) AND `work`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.000700s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `kehu` WHERE `kehu`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.000639s ]
+---------------------------------------------------------------
+[ 2019-05-18T10:01:57+08:00 ] 192.168.101.137 POST 172.16.101.22/home/index/getWorkChar
+[运行时间：0.029091s] [吞吐率：34.38req/s] [内存消耗：1,207.25kb] [文件加载：88]
+[ info ] [ LANG ] /var/www/manager_cmlaw/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => '172.16.101.22',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://172.16.101.22',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36',
+  'referer' => 'http://172.16.101.22/home/index/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=0uu02npet89l4cae06211jr9ap; USERID=4; USERREALNAME=%E4%BB%BB%E5%B0%8F%E6%9B%BC',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001512s ] mysql:host=172.16.101.20;port=3306;dbname=lawyer_cmlaw;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.001124s ]
+[ sql ] [ SQL ] SELECT `groupid` FROM `auth_group_access` WHERE (  `userid` = 4 ) AND `auth_group_access`.`delete_time` IS NULL [ RunTime:0.000672s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group` [ RunTime:0.000878s ]
+[ sql ] [ SQL ] SELECT `rules` FROM `auth_group` WHERE (  `id` IN (174) ) AND `auth_group`.`delete_time` IS NULL [ RunTime:0.000553s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_view` [ RunTime:0.001461s ]
+[ sql ] [ SQL ] SELECT * FROM `user_view` WHERE (  `iduser` = 4 ) AND `user_view`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.001153s ]
+[ sql ] [ SQL ] SELECT * FROM `user_view` WHERE (  `iduser` = 4 ) AND `user_view`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.001039s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `work_view` [ RunTime:0.001804s ]
+[ sql ] [ SQL ] SELECT work_end_date as "date",sum(`work_unit`) as "sum" FROM `work_view` WHERE (  `iduser` = 4  AND `work_end_date` LIKE '%2019%' ) AND `work_view`.`delete_time` IS NULL GROUP BY `work_end_date` ORDER BY `work_end_date` ASC LIMIT 0,30 [ RunTime:0.001653s ]
+---------------------------------------------------------------
+[ 2019-05-18T10:34:38+08:00 ] 192.168.101.137 POST 172.16.101.22/quanxian/get.quanxian
+[运行时间：0.109730s] [吞吐率：9.11req/s] [内存消耗：1,192.21kb] [文件加载：88]
+[ info ] [ LANG ] /var/www/manager_cmlaw/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'quanxian/get.quanxian',
+  'route' => 'api/quanxian/getQuanxian',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'method' => 'get|post',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '172.16.101.22',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => 'application/json, text/plain, */*',
+  'origin' => 'http://172.16.101.22',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36',
+  'referer' => 'http://172.16.101.22/caiwu-guanli/caiwu-seach?caiwu.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=0uu02npet89l4cae06211jr9ap; USERID=4; USERREALNAME=%E4%BB%BB%E5%B0%8F%E6%9B%BC',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001487s ] mysql:host=172.16.101.20;port=3306;dbname=lawyer_cmlaw;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.001118s ]
+[ sql ] [ SQL ] SELECT `groupid` FROM `auth_group_access` WHERE (  `userid` = 4 ) AND `auth_group_access`.`delete_time` IS NULL [ RunTime:0.000772s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group` [ RunTime:0.000917s ]
+[ sql ] [ SQL ] SELECT `rules` FROM `auth_group` WHERE (  `id` IN (174) ) AND `auth_group`.`delete_time` IS NULL [ RunTime:0.000627s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_rule` [ RunTime:0.000892s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_rule` WHERE  `id` IN (9,10,11,22,23,97,99,134,138,139,135,136,137,15,115,141,117,118,119,156,124,125,120,121,122,142,143,144,145,146,147,123,148,126,127,149,150,128,151,129,130,152,131,132,140,133,153,154,155,157,159,160,161,162,163,158,164,165,166,167,168)  AND `ruleid` = 0  AND `type` = 1 ORDER BY `paixun` DESC [ RunTime:0.001109s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_rule` WHERE  `id` IN (9,10,11,22,23,97,99,134,138,139,135,136,137,15,115,141,117,118,119,156,124,125,120,121,122,142,143,144,145,146,147,123,148,126,127,149,150,128,151,129,130,152,131,132,140,133,153,154,155,157,159,160,161,162,163,158,164,165,166,167,168)  AND `title` = 'quanxian/getquanxian' LIMIT 1 [ RunTime:0.000895s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_rule` WHERE  `id` IN (9,10,11,22,23,97,99,134,138,139,135,136,137,15,115,141,117,118,119,156,124,125,120,121,122,142,143,144,145,146,147,123,148,126,127,149,150,128,151,129,130,152,131,132,140,133,153,154,155,157,159,160,161,162,163,158,164,165,166,167,168)  AND `ruleid` IS NULL  AND `type` = 1 ORDER BY `paixun` DESC [ RunTime:0.000740s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_view` [ RunTime:0.001468s ]
+[ sql ] [ SQL ] SELECT * FROM `user_view` WHERE (  `iduser` = 4 ) AND `user_view`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.001214s ]
+[ sql ] [ SQL ] SELECT * FROM `user_view` WHERE (  `iduser` = 4 ) AND `user_view`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.001135s ]
+[ sql ] [ SQL ] SELECT `groupid` FROM `auth_group_access` WHERE (  `userid` = 4 ) AND `auth_group_access`.`delete_time` IS NULL [ RunTime:0.000618s ]
+[ sql ] [ SQL ] SELECT `rules` FROM `auth_group` WHERE (  `id` IN (174) ) AND `auth_group`.`delete_time` IS NULL [ RunTime:0.000572s ]
+[ sql ] [ SQL ] SELECT name,title as "url",substring(`title`,18) as "title" FROM `auth_rule` WHERE (  `id` IN (9,10,11,22,23,97,99,134,138,139,135,136,137,15,115,141,117,118,119,156,124,125,120,121,122,142,143,144,145,146,147,123,148,126,127,149,150,128,151,129,130,152,131,132,140,133,153,154,155,157,159,160,161,162,163,158,164,165,166,167,168)  AND `ruleid` = 157 ) AND `auth_rule`.`delete_time` IS NULL [ RunTime:0.001212s ]
+[ sql ] [ SQL ] SELECT name,title as "url",substring(`title`,15) as "title" FROM `auth_rule` WHERE (  `id` IN (9,10,11,22,23,97,99,134,138,139,135,136,137,15,115,141,117,118,119,156,124,125,120,121,122,142,143,144,145,146,147,123,148,126,127,149,150,128,151,129,130,152,131,132,140,133,153,154,155,157,159,160,161,162,163,158,164,165,166,167,168)  AND `ruleid` = 158 ) AND `auth_rule`.`delete_time` IS NULL [ RunTime:0.000896s ]
+[ sql ] [ SQL ] SELECT name,title as "url",substring(`title`,15) as "title" FROM `auth_rule` WHERE (  `id` IN (9,10,11,22,23,97,99,134,138,139,135,136,137,15,115,141,117,118,119,156,124,125,120,121,122,142,143,144,145,146,147,123,148,126,127,149,150,128,151,129,130,152,131,132,140,133,153,154,155,157,159,160,161,162,163,158,164,165,166,167,168)  AND `ruleid` = 0 ) AND `auth_rule`.`delete_time` IS NULL ORDER BY `paixun` DESC [ RunTime:0.000912s ]
+---------------------------------------------------------------
+[ 2019-05-18T10:34:38+08:00 ] 192.168.101.137 POST 172.16.101.22/anjian/anjian.list
+[运行时间：0.127088s] [吞吐率：7.87req/s] [内存消耗：1,189.94kb] [文件加载：87]
+[ info ] [ LANG ] /var/www/manager_cmlaw/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'anjian/anjian.list',
+  'route' => 'api/anjian/anjian_list',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'method' => 'get|post',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '172.16.101.22',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => 'application/json, text/plain, */*',
+  'origin' => 'http://172.16.101.22',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36',
+  'referer' => 'http://172.16.101.22/caiwu-guanli/caiwu-seach?caiwu.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=0uu02npet89l4cae06211jr9ap; USERID=4; USERREALNAME=%E4%BB%BB%E5%B0%8F%E6%9B%BC',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001101s ] mysql:host=172.16.101.20;port=3306;dbname=lawyer_cmlaw;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.000951s ]
+[ sql ] [ SQL ] SELECT `groupid` FROM `auth_group_access` WHERE (  `userid` = 4 ) AND `auth_group_access`.`delete_time` IS NULL [ RunTime:0.000570s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group` [ RunTime:0.000851s ]
+[ sql ] [ SQL ] SELECT `rules` FROM `auth_group` WHERE (  `id` IN (174) ) AND `auth_group`.`delete_time` IS NULL [ RunTime:0.000636s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_rule` [ RunTime:0.000911s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_rule` WHERE  `id` IN (9,10,11,22,23,97,99,134,138,139,135,136,137,15,115,141,117,118,119,156,124,125,120,121,122,142,143,144,145,146,147,123,148,126,127,149,150,128,151,129,130,152,131,132,140,133,153,154,155,157,159,160,161,162,163,158,164,165,166,167,168)  AND `ruleid` = 0  AND `type` = 1 ORDER BY `paixun` DESC [ RunTime:0.001071s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_rule` WHERE  `id` IN (9,10,11,22,23,97,99,134,138,139,135,136,137,15,115,141,117,118,119,156,124,125,120,121,122,142,143,144,145,146,147,123,148,126,127,149,150,128,151,129,130,152,131,132,140,133,153,154,155,157,159,160,161,162,163,158,164,165,166,167,168)  AND `title` = 'anjian/anjian_list' LIMIT 1 [ RunTime:0.000907s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_rule` WHERE  `id` IN (9,10,11,22,23,97,99,134,138,139,135,136,137,15,115,141,117,118,119,156,124,125,120,121,122,142,143,144,145,146,147,123,148,126,127,149,150,128,151,129,130,152,131,132,140,133,153,154,155,157,159,160,161,162,163,158,164,165,166,167,168)  AND `ruleid` IS NULL  AND `type` = 1 ORDER BY `paixun` DESC [ RunTime:0.000916s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_view` [ RunTime:0.001503s ]
+[ sql ] [ SQL ] SELECT * FROM `user_view` WHERE (  `iduser` = 4 ) AND `user_view`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.001153s ]
+[ sql ] [ SQL ] SELECT * FROM `user_view` WHERE (  `iduser` = 4 ) AND `user_view`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.001037s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `anjian_user_view` [ RunTime:0.001671s ]
+[ sql ] [ SQL ] SELECT `idanjian`,`anjian_number`,`anjian_title`,`anjian_date`,`anjian_status`,`fensuo_name`,`zhonglei_name`,`idkehu`,`kehu_name` FROM `anjian_user_view` WHERE (  `iduser` = 4  AND `anjian_status` = 3 ) AND `anjian_user_view`.`delete_time` IS NULL ORDER BY `idanjian` ASC [ RunTime:0.001940s ]
+---------------------------------------------------------------
+[ 2019-05-18T10:34:38+08:00 ] 192.168.101.137 POST 172.16.101.22/user/hehuoren.list
+[运行时间：0.119448s] [吞吐率：8.37req/s] [内存消耗：1,154.11kb] [文件加载：86]
+[ info ] [ LANG ] /var/www/manager_cmlaw/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'user/hehuoren.list',
+  'route' => 'api/user/hehuoren_list',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'method' => 'get|post',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '172.16.101.22',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => 'application/json, text/plain, */*',
+  'origin' => 'http://172.16.101.22',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36',
+  'referer' => 'http://172.16.101.22/caiwu-guanli/caiwu-seach?caiwu.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=0uu02npet89l4cae06211jr9ap; USERID=4; USERREALNAME=%E4%BB%BB%E5%B0%8F%E6%9B%BC',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001055s ] mysql:host=172.16.101.20;port=3306;dbname=lawyer_cmlaw;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.000947s ]
+[ sql ] [ SQL ] SELECT `groupid` FROM `auth_group_access` WHERE (  `userid` = 4 ) AND `auth_group_access`.`delete_time` IS NULL [ RunTime:0.000631s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group` [ RunTime:0.000912s ]
+[ sql ] [ SQL ] SELECT `rules` FROM `auth_group` WHERE (  `id` IN (174) ) AND `auth_group`.`delete_time` IS NULL [ RunTime:0.000622s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_rule` [ RunTime:0.000907s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_rule` WHERE  `id` IN (9,10,11,22,23,97,99,134,138,139,135,136,137,15,115,141,117,118,119,156,124,125,120,121,122,142,143,144,145,146,147,123,148,126,127,149,150,128,151,129,130,152,131,132,140,133,153,154,155,157,159,160,161,162,163,158,164,165,166,167,168)  AND `ruleid` = 0  AND `type` = 1 ORDER BY `paixun` DESC [ RunTime:0.001157s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_rule` WHERE  `id` IN (9,10,11,22,23,97,99,134,138,139,135,136,137,15,115,141,117,118,119,156,124,125,120,121,122,142,143,144,145,146,147,123,148,126,127,149,150,128,151,129,130,152,131,132,140,133,153,154,155,157,159,160,161,162,163,158,164,165,166,167,168)  AND `title` = 'user/hehuoren_list' LIMIT 1 [ RunTime:0.000932s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_rule` WHERE  `id` IN (9,10,11,22,23,97,99,134,138,139,135,136,137,15,115,141,117,118,119,156,124,125,120,121,122,142,143,144,145,146,147,123,148,126,127,149,150,128,151,129,130,152,131,132,140,133,153,154,155,157,159,160,161,162,163,158,164,165,166,167,168)  AND `ruleid` IS NULL  AND `type` = 1 ORDER BY `paixun` DESC [ RunTime:0.000831s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_view` [ RunTime:0.001480s ]
+[ sql ] [ SQL ] SELECT * FROM `user_view` WHERE (  `iduser` = 4 ) AND `user_view`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.001202s ]
+[ sql ] [ SQL ] SELECT * FROM `user_view` WHERE (  `iduser` = 4 ) AND `user_view`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.001063s ]
+[ sql ] [ SQL ] SELECT `iduser`,`user_realname`,`bumen_name` FROM `user_view` WHERE (  `idzhiwei` = 2 ) AND `user_view`.`delete_time` IS NULL [ RunTime:0.000916s ]
+---------------------------------------------------------------
+[ 2019-05-18T10:34:38+08:00 ] 192.168.101.137 POST 172.16.101.22/quanxian/get.quanxian
+[运行时间：0.156160s] [吞吐率：6.40req/s] [内存消耗：1,221.47kb] [文件加载：88]
+[ info ] [ LANG ] /var/www/manager_cmlaw/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'quanxian/get.quanxian',
+  'route' => 'api/quanxian/getQuanxian',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'method' => 'get|post',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '172.16.101.22',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => 'application/json, text/plain, */*',
+  'origin' => 'http://172.16.101.22',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36',
+  'referer' => 'http://172.16.101.22/caiwu-guanli/caiwu-seach?caiwu.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=0uu02npet89l4cae06211jr9ap; USERID=4; USERREALNAME=%E4%BB%BB%E5%B0%8F%E6%9B%BC',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000977s ] mysql:host=172.16.101.20;port=3306;dbname=lawyer_cmlaw;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.000893s ]
+[ sql ] [ SQL ] SELECT `groupid` FROM `auth_group_access` WHERE (  `userid` = 4 ) AND `auth_group_access`.`delete_time` IS NULL [ RunTime:0.000638s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group` [ RunTime:0.000897s ]
+[ sql ] [ SQL ] SELECT `rules` FROM `auth_group` WHERE (  `id` IN (174) ) AND `auth_group`.`delete_time` IS NULL [ RunTime:0.000589s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_rule` [ RunTime:0.000854s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_rule` WHERE  `id` IN (9,10,11,22,23,97,99,134,138,139,135,136,137,15,115,141,117,118,119,156,124,125,120,121,122,142,143,144,145,146,147,123,148,126,127,149,150,128,151,129,130,152,131,132,140,133,153,154,155,157,159,160,161,162,163,158,164,165,166,167,168)  AND `ruleid` = 0  AND `type` = 1 ORDER BY `paixun` DESC [ RunTime:0.001174s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_rule` WHERE  `id` IN (9,10,11,22,23,97,99,134,138,139,135,136,137,15,115,141,117,118,119,156,124,125,120,121,122,142,143,144,145,146,147,123,148,126,127,149,150,128,151,129,130,152,131,132,140,133,153,154,155,157,159,160,161,162,163,158,164,165,166,167,168)  AND `title` = 'quanxian/getquanxian' LIMIT 1 [ RunTime:0.000920s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_rule` WHERE  `id` IN (9,10,11,22,23,97,99,134,138,139,135,136,137,15,115,141,117,118,119,156,124,125,120,121,122,142,143,144,145,146,147,123,148,126,127,149,150,128,151,129,130,152,131,132,140,133,153,154,155,157,159,160,161,162,163,158,164,165,166,167,168)  AND `ruleid` IS NULL  AND `type` = 1 ORDER BY `paixun` DESC [ RunTime:0.000794s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_view` [ RunTime:0.001415s ]
+[ sql ] [ SQL ] SELECT * FROM `user_view` WHERE (  `iduser` = 4 ) AND `user_view`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.001141s ]
+[ sql ] [ SQL ] SELECT * FROM `user_view` WHERE (  `iduser` = 4 ) AND `user_view`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.001038s ]
+[ sql ] [ SQL ] SELECT `groupid` FROM `auth_group_access` WHERE (  `userid` = 4 ) AND `auth_group_access`.`delete_time` IS NULL [ RunTime:0.000608s ]
+[ sql ] [ SQL ] SELECT `rules` FROM `auth_group` WHERE (  `id` IN (174) ) AND `auth_group`.`delete_time` IS NULL [ RunTime:0.000566s ]
+[ sql ] [ SQL ] SELECT name,title as "url",substring(`title`,18) as "title" FROM `auth_rule` WHERE (  `id` IN (9,10,11,22,23,97,99,134,138,139,135,136,137,15,115,141,117,118,119,156,124,125,120,121,122,142,143,144,145,146,147,123,148,126,127,149,150,128,151,129,130,152,131,132,140,133,153,154,155,157,159,160,161,162,163,158,164,165,166,167,168)  AND `ruleid` = 157 ) AND `auth_rule`.`delete_time` IS NULL [ RunTime:0.000954s ]
+[ sql ] [ SQL ] SELECT name,title as "url",substring(`title`,15) as "title" FROM `auth_rule` WHERE (  `id` IN (9,10,11,22,23,97,99,134,138,139,135,136,137,15,115,141,117,118,119,156,124,125,120,121,122,142,143,144,145,146,147,123,148,126,127,149,150,128,151,129,130,152,131,132,140,133,153,154,155,157,159,160,161,162,163,158,164,165,166,167,168)  AND `ruleid` = 158 ) AND `auth_rule`.`delete_time` IS NULL [ RunTime:0.000881s ]
+[ sql ] [ SQL ] SELECT name,title as "url",substring(`title`,15) as "title" FROM `auth_rule` WHERE (  `id` IN (9,10,11,22,23,97,99,134,138,139,135,136,137,15,115,141,117,118,119,156,124,125,120,121,122,142,143,144,145,146,147,123,148,126,127,149,150,128,151,129,130,152,131,132,140,133,153,154,155,157,159,160,161,162,163,158,164,165,166,167,168)  AND `ruleid` = 0 ) AND `auth_rule`.`delete_time` IS NULL ORDER BY `paixun` DESC [ RunTime:0.000890s ]
+---------------------------------------------------------------
+[ 2019-05-18T10:34:38+08:00 ] 192.168.101.137 POST 172.16.101.22/quanxian/is.quanxian
+[运行时间：0.168015s] [吞吐率：5.95req/s] [内存消耗：1,169.59kb] [文件加载：87]
+[ info ] [ LANG ] /var/www/manager_cmlaw/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'quanxian/is.quanxian',
+  'route' => 'api/quanxian/isQuanxian',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'method' => 'get|post',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '172.16.101.22',
+  'connection' => 'keep-alive',
+  'content-length' => '35',
+  'accept' => 'application/json, text/plain, */*',
+  'origin' => 'http://172.16.101.22',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36',
+  'content-type' => 'application/json;charset=UTF-8',
+  'referer' => 'http://172.16.101.22/caiwu-guanli/caiwu-seach?caiwu.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=0uu02npet89l4cae06211jr9ap; USERID=4; USERREALNAME=%E4%BB%BB%E5%B0%8F%E6%9B%BC',
+)
+[ info ] [ PARAM ] array (
+  'url' => '/caiwu-guanli/caiwu-seach',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000936s ] mysql:host=172.16.101.20;port=3306;dbname=lawyer_cmlaw;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.000948s ]
+[ sql ] [ SQL ] SELECT `groupid` FROM `auth_group_access` WHERE (  `userid` = 4 ) AND `auth_group_access`.`delete_time` IS NULL [ RunTime:0.000608s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group` [ RunTime:0.000948s ]
+[ sql ] [ SQL ] SELECT `rules` FROM `auth_group` WHERE (  `id` IN (174) ) AND `auth_group`.`delete_time` IS NULL [ RunTime:0.000628s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_rule` [ RunTime:0.000906s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_rule` WHERE  `id` IN (9,10,11,22,23,97,99,134,138,139,135,136,137,15,115,141,117,118,119,156,124,125,120,121,122,142,143,144,145,146,147,123,148,126,127,149,150,128,151,129,130,152,131,132,140,133,153,154,155,157,159,160,161,162,163,158,164,165,166,167,168)  AND `ruleid` = 0  AND `type` = 1 ORDER BY `paixun` DESC [ RunTime:0.001065s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_rule` WHERE  `id` IN (9,10,11,22,23,97,99,134,138,139,135,136,137,15,115,141,117,118,119,156,124,125,120,121,122,142,143,144,145,146,147,123,148,126,127,149,150,128,151,129,130,152,131,132,140,133,153,154,155,157,159,160,161,162,163,158,164,165,166,167,168)  AND `title` = 'quanxian/isquanxian' LIMIT 1 [ RunTime:0.000888s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_rule` WHERE  `id` IN (9,10,11,22,23,97,99,134,138,139,135,136,137,15,115,141,117,118,119,156,124,125,120,121,122,142,143,144,145,146,147,123,148,126,127,149,150,128,151,129,130,152,131,132,140,133,153,154,155,157,159,160,161,162,163,158,164,165,166,167,168)  AND `ruleid` IS NULL  AND `type` = 1 ORDER BY `paixun` DESC [ RunTime:0.000766s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_view` [ RunTime:0.001513s ]
+[ sql ] [ SQL ] SELECT * FROM `user_view` WHERE (  `iduser` = 4 ) AND `user_view`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.001184s ]
+[ sql ] [ SQL ] SELECT * FROM `user_view` WHERE (  `iduser` = 4 ) AND `user_view`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.001073s ]
+[ sql ] [ SQL ] SELECT `id` FROM `auth_rule` WHERE (  `title` = '/caiwu-guanli/caiwu-seach' ) AND `auth_rule`.`delete_time` IS NULL [ RunTime:0.000649s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_group` WHERE (  `status` = 1 ) AND `auth_group`.`delete_time` IS NULL [ RunTime:0.000701s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_group_access` WHERE (  `groupid` IN (1,174)  AND `userid` = 4 ) AND `auth_group_access`.`delete_time` IS NULL [ RunTime:0.000665s ]
+---------------------------------------------------------------
+[ 2019-05-18T10:34:38+08:00 ] 192.168.101.137 POST 172.16.101.22/zhangdan/zhangdan.list
+[运行时间：0.233777s] [吞吐率：4.28req/s] [内存消耗：1,205.92kb] [文件加载：90]
+[ info ] [ LANG ] /var/www/manager_cmlaw/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'zhangdan/zhangdan.list',
+  'route' => 'api/zhangdan/zhangdan_list',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'method' => 'get|post',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '172.16.101.22',
+  'connection' => 'keep-alive',
+  'content-length' => '60',
+  'accept' => 'application/json, text/plain, */*',
+  'origin' => 'http://172.16.101.22',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36',
+  'content-type' => 'application/json;charset=UTF-8',
+  'referer' => 'http://172.16.101.22/caiwu-guanli/caiwu-seach?caiwu.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=0uu02npet89l4cae06211jr9ap; USERID=4; USERREALNAME=%E4%BB%BB%E5%B0%8F%E6%9B%BC',
+)
+[ info ] [ PARAM ] array (
+  'zhangdan_status' => '2',
+  'tiaoshu' => 10,
+  'page' => 1,
+  'type' => 'caiwu',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001055s ] mysql:host=172.16.101.20;port=3306;dbname=lawyer_cmlaw;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.001069s ]
+[ sql ] [ SQL ] SELECT `groupid` FROM `auth_group_access` WHERE (  `userid` = 4 ) AND `auth_group_access`.`delete_time` IS NULL [ RunTime:0.000673s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group` [ RunTime:0.000933s ]
+[ sql ] [ SQL ] SELECT `rules` FROM `auth_group` WHERE (  `id` IN (174) ) AND `auth_group`.`delete_time` IS NULL [ RunTime:0.000623s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_rule` [ RunTime:0.000906s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_rule` WHERE  `id` IN (9,10,11,22,23,97,99,134,138,139,135,136,137,15,115,141,117,118,119,156,124,125,120,121,122,142,143,144,145,146,147,123,148,126,127,149,150,128,151,129,130,152,131,132,140,133,153,154,155,157,159,160,161,162,163,158,164,165,166,167,168)  AND `ruleid` = 0  AND `type` = 1 ORDER BY `paixun` DESC [ RunTime:0.001102s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_rule` WHERE  `id` IN (9,10,11,22,23,97,99,134,138,139,135,136,137,15,115,141,117,118,119,156,124,125,120,121,122,142,143,144,145,146,147,123,148,126,127,149,150,128,151,129,130,152,131,132,140,133,153,154,155,157,159,160,161,162,163,158,164,165,166,167,168)  AND `title` = 'zhangdan/zhangdan_list' LIMIT 1 [ RunTime:0.000904s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_rule` WHERE  `id` IN (9,10,11,22,23,97,99,134,138,139,135,136,137,15,115,141,117,118,119,156,124,125,120,121,122,142,143,144,145,146,147,123,148,126,127,149,150,128,151,129,130,152,131,132,140,133,153,154,155,157,159,160,161,162,163,158,164,165,166,167,168)  AND `ruleid` IS NULL  AND `type` = 1 ORDER BY `paixun` DESC [ RunTime:0.000779s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_view` [ RunTime:0.001435s ]
+[ sql ] [ SQL ] SELECT * FROM `user_view` WHERE (  `iduser` = 4 ) AND `user_view`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.001142s ]
+[ sql ] [ SQL ] SELECT * FROM `user_view` WHERE (  `iduser` = 4 ) AND `user_view`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.001071s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zhangdan_1_view` [ RunTime:0.002507s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zhangdan_1_view` WHERE (  `zhangdan_status` LIKE %2% ) AND `zhangdan_1_view`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.001290s ]
+[ sql ] [ SQL ] SELECT `idzhangdan`,`zhangdan_number`,`zhangdan_type`,`zhangdan_bizhong`,`zhangdan_date`,`zhangdan_money`,`zhangdan_status`,`user_realname`,`idanjian`,`anjian_number`,`anjian_title`,`create_time`,`zhangdan_jindu`,`zhangdan_fapiao` FROM `zhangdan_1_view` WHERE (  `zhangdan_status` LIKE %2% ) AND `zhangdan_1_view`.`delete_time` IS NULL ORDER BY `idzhangdan` DESC LIMIT 0,10 [ RunTime:0.001421s ]
+[ sql ] [ SQL ] SELECT zhangdan_status as status,count(*) as sum FROM `zhangdan_1_view` WHERE `zhangdan_1_view`.`delete_time` IS NULL GROUP BY `zhangdan_status` [ RunTime:0.001355s ]
+---------------------------------------------------------------
+[ 2019-05-18T10:34:40+08:00 ] 192.168.101.137 POST 172.16.101.22/quanxian/get.quanxian
+[运行时间：0.023151s] [吞吐率：43.19req/s] [内存消耗：1,191.01kb] [文件加载：88]
+[ info ] [ LANG ] /var/www/manager_cmlaw/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'quanxian/get.quanxian',
+  'route' => 'api/quanxian/getQuanxian',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'method' => 'get|post',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '172.16.101.22',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => 'application/json, text/plain, */*',
+  'origin' => 'http://172.16.101.22',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36',
+  'referer' => 'http://172.16.101.22/zhangdan-guanli/zhangdan-guanli',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=0uu02npet89l4cae06211jr9ap; USERID=4; USERREALNAME=%E4%BB%BB%E5%B0%8F%E6%9B%BC',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001736s ] mysql:host=172.16.101.20;port=3306;dbname=lawyer_cmlaw;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.001210s ]
+[ sql ] [ SQL ] SELECT `groupid` FROM `auth_group_access` WHERE (  `userid` = 4 ) AND `auth_group_access`.`delete_time` IS NULL [ RunTime:0.000678s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group` [ RunTime:0.000896s ]
+[ sql ] [ SQL ] SELECT `rules` FROM `auth_group` WHERE (  `id` IN (174) ) AND `auth_group`.`delete_time` IS NULL [ RunTime:0.000561s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_rule` [ RunTime:0.000908s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_rule` WHERE  `id` IN (9,10,11,22,23,97,99,134,138,139,135,136,137,15,115,141,117,118,119,156,124,125,120,121,122,142,143,144,145,146,147,123,148,126,127,149,150,128,151,129,130,152,131,132,140,133,153,154,155,157,159,160,161,162,163,158,164,165,166,167,168)  AND `ruleid` = 0  AND `type` = 1 ORDER BY `paixun` DESC [ RunTime:0.001115s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_rule` WHERE  `id` IN (9,10,11,22,23,97,99,134,138,139,135,136,137,15,115,141,117,118,119,156,124,125,120,121,122,142,143,144,145,146,147,123,148,126,127,149,150,128,151,129,130,152,131,132,140,133,153,154,155,157,159,160,161,162,163,158,164,165,166,167,168)  AND `title` = 'quanxian/getquanxian' LIMIT 1 [ RunTime:0.000902s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_rule` WHERE  `id` IN (9,10,11,22,23,97,99,134,138,139,135,136,137,15,115,141,117,118,119,156,124,125,120,121,122,142,143,144,145,146,147,123,148,126,127,149,150,128,151,129,130,152,131,132,140,133,153,154,155,157,159,160,161,162,163,158,164,165,166,167,168)  AND `ruleid` IS NULL  AND `type` = 1 ORDER BY `paixun` DESC [ RunTime:0.000777s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_view` [ RunTime:0.001434s ]
+[ sql ] [ SQL ] SELECT * FROM `user_view` WHERE (  `iduser` = 4 ) AND `user_view`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.001158s ]
+[ sql ] [ SQL ] SELECT * FROM `user_view` WHERE (  `iduser` = 4 ) AND `user_view`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.001034s ]
+[ sql ] [ SQL ] SELECT `groupid` FROM `auth_group_access` WHERE (  `userid` = 4 ) AND `auth_group_access`.`delete_time` IS NULL [ RunTime:0.000513s ]
+[ sql ] [ SQL ] SELECT `rules` FROM `auth_group` WHERE (  `id` IN (174) ) AND `auth_group`.`delete_time` IS NULL [ RunTime:0.000553s ]
+[ sql ] [ SQL ] SELECT name,title as "url",substring(`title`,18) as "title" FROM `auth_rule` WHERE (  `id` IN (9,10,11,22,23,97,99,134,138,139,135,136,137,15,115,141,117,118,119,156,124,125,120,121,122,142,143,144,145,146,147,123,148,126,127,149,150,128,151,129,130,152,131,132,140,133,153,154,155,157,159,160,161,162,163,158,164,165,166,167,168)  AND `ruleid` = 157 ) AND `auth_rule`.`delete_time` IS NULL [ RunTime:0.000898s ]
+[ sql ] [ SQL ] SELECT name,title as "url",substring(`title`,15) as "title" FROM `auth_rule` WHERE (  `id` IN (9,10,11,22,23,97,99,134,138,139,135,136,137,15,115,141,117,118,119,156,124,125,120,121,122,142,143,144,145,146,147,123,148,126,127,149,150,128,151,129,130,152,131,132,140,133,153,154,155,157,159,160,161,162,163,158,164,165,166,167,168)  AND `ruleid` = 158 ) AND `auth_rule`.`delete_time` IS NULL [ RunTime:0.000926s ]
+[ sql ] [ SQL ] SELECT name,title as "url",substring(`title`,15) as "title" FROM `auth_rule` WHERE (  `id` IN (9,10,11,22,23,97,99,134,138,139,135,136,137,15,115,141,117,118,119,156,124,125,120,121,122,142,143,144,145,146,147,123,148,126,127,149,150,128,151,129,130,152,131,132,140,133,153,154,155,157,159,160,161,162,163,158,164,165,166,167,168)  AND `ruleid` = 0 ) AND `auth_rule`.`delete_time` IS NULL ORDER BY `paixun` DESC [ RunTime:0.000946s ]
+---------------------------------------------------------------
+[ 2019-05-18T10:34:40+08:00 ] 192.168.101.137 POST 172.16.101.22/quanxian/is.quanxian
+[运行时间：0.039425s] [吞吐率：25.36req/s] [内存消耗：1,140.32kb] [文件加载：87]
+[ info ] [ LANG ] /var/www/manager_cmlaw/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'quanxian/is.quanxian',
+  'route' => 'api/quanxian/isQuanxian',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'method' => 'get|post',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '172.16.101.22',
+  'connection' => 'keep-alive',
+  'content-length' => '42',
+  'accept' => 'application/json, text/plain, */*',
+  'origin' => 'http://172.16.101.22',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36',
+  'content-type' => 'application/json;charset=UTF-8',
+  'referer' => 'http://172.16.101.22/zhangdan-guanli/zhangdan-guanli',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=0uu02npet89l4cae06211jr9ap; USERID=4; USERREALNAME=%E4%BB%BB%E5%B0%8F%E6%9B%BC',
+)
+[ info ] [ PARAM ] array (
+  'url' => '/zhangdan-guanli/zhangdan-guanli',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000956s ] mysql:host=172.16.101.20;port=3306;dbname=lawyer_cmlaw;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.000958s ]
+[ sql ] [ SQL ] SELECT `groupid` FROM `auth_group_access` WHERE (  `userid` = 4 ) AND `auth_group_access`.`delete_time` IS NULL [ RunTime:0.000677s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group` [ RunTime:0.000869s ]
+[ sql ] [ SQL ] SELECT `rules` FROM `auth_group` WHERE (  `id` IN (174) ) AND `auth_group`.`delete_time` IS NULL [ RunTime:0.000643s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_rule` [ RunTime:0.000854s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_rule` WHERE  `id` IN (9,10,11,22,23,97,99,134,138,139,135,136,137,15,115,141,117,118,119,156,124,125,120,121,122,142,143,144,145,146,147,123,148,126,127,149,150,128,151,129,130,152,131,132,140,133,153,154,155,157,159,160,161,162,163,158,164,165,166,167,168)  AND `ruleid` = 0  AND `type` = 1 ORDER BY `paixun` DESC [ RunTime:0.001092s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_rule` WHERE  `id` IN (9,10,11,22,23,97,99,134,138,139,135,136,137,15,115,141,117,118,119,156,124,125,120,121,122,142,143,144,145,146,147,123,148,126,127,149,150,128,151,129,130,152,131,132,140,133,153,154,155,157,159,160,161,162,163,158,164,165,166,167,168)  AND `title` = 'quanxian/isquanxian' LIMIT 1 [ RunTime:0.000864s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_rule` WHERE  `id` IN (9,10,11,22,23,97,99,134,138,139,135,136,137,15,115,141,117,118,119,156,124,125,120,121,122,142,143,144,145,146,147,123,148,126,127,149,150,128,151,129,130,152,131,132,140,133,153,154,155,157,159,160,161,162,163,158,164,165,166,167,168)  AND `ruleid` IS NULL  AND `type` = 1 ORDER BY `paixun` DESC [ RunTime:0.000750s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_view` [ RunTime:0.001480s ]
+[ sql ] [ SQL ] SELECT * FROM `user_view` WHERE (  `iduser` = 4 ) AND `user_view`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.001155s ]
+[ sql ] [ SQL ] SELECT * FROM `user_view` WHERE (  `iduser` = 4 ) AND `user_view`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.001032s ]
+[ sql ] [ SQL ] SELECT `id` FROM `auth_rule` WHERE (  `title` = '/zhangdan-guanli/zhangdan-guanli' ) AND `auth_rule`.`delete_time` IS NULL [ RunTime:0.000556s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_group` WHERE (  `status` = 1 ) AND `auth_group`.`delete_time` IS NULL [ RunTime:0.000628s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_group_access` WHERE (  `groupid` IN (1,173,174)  AND `userid` = 4 ) AND `auth_group_access`.`delete_time` IS NULL [ RunTime:0.000603s ]
+---------------------------------------------------------------
+[ 2019-05-18T10:34:40+08:00 ] 192.168.101.137 POST 172.16.101.22/anjian/anjian.list
+[运行时间：0.054833s] [吞吐率：18.24req/s] [内存消耗：1,188.83kb] [文件加载：87]
+[ info ] [ LANG ] /var/www/manager_cmlaw/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'anjian/anjian.list',
+  'route' => 'api/anjian/anjian_list',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'method' => 'get|post',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '172.16.101.22',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => 'application/json, text/plain, */*',
+  'origin' => 'http://172.16.101.22',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36',
+  'referer' => 'http://172.16.101.22/zhangdan-guanli/zhangdan-guanli',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=0uu02npet89l4cae06211jr9ap; USERID=4; USERREALNAME=%E4%BB%BB%E5%B0%8F%E6%9B%BC',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000965s ] mysql:host=172.16.101.20;port=3306;dbname=lawyer_cmlaw;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.001043s ]
+[ sql ] [ SQL ] SELECT `groupid` FROM `auth_group_access` WHERE (  `userid` = 4 ) AND `auth_group_access`.`delete_time` IS NULL [ RunTime:0.000683s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group` [ RunTime:0.000909s ]
+[ sql ] [ SQL ] SELECT `rules` FROM `auth_group` WHERE (  `id` IN (174) ) AND `auth_group`.`delete_time` IS NULL [ RunTime:0.000664s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_rule` [ RunTime:0.000880s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_rule` WHERE  `id` IN (9,10,11,22,23,97,99,134,138,139,135,136,137,15,115,141,117,118,119,156,124,125,120,121,122,142,143,144,145,146,147,123,148,126,127,149,150,128,151,129,130,152,131,132,140,133,153,154,155,157,159,160,161,162,163,158,164,165,166,167,168)  AND `ruleid` = 0  AND `type` = 1 ORDER BY `paixun` DESC [ RunTime:0.001060s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_rule` WHERE  `id` IN (9,10,11,22,23,97,99,134,138,139,135,136,137,15,115,141,117,118,119,156,124,125,120,121,122,142,143,144,145,146,147,123,148,126,127,149,150,128,151,129,130,152,131,132,140,133,153,154,155,157,159,160,161,162,163,158,164,165,166,167,168)  AND `title` = 'anjian/anjian_list' LIMIT 1 [ RunTime:0.001005s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_rule` WHERE  `id` IN (9,10,11,22,23,97,99,134,138,139,135,136,137,15,115,141,117,118,119,156,124,125,120,121,122,142,143,144,145,146,147,123,148,126,127,149,150,128,151,129,130,152,131,132,140,133,153,154,155,157,159,160,161,162,163,158,164,165,166,167,168)  AND `ruleid` IS NULL  AND `type` = 1 ORDER BY `paixun` DESC [ RunTime:0.000841s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_view` [ RunTime:0.001498s ]
+[ sql ] [ SQL ] SELECT * FROM `user_view` WHERE (  `iduser` = 4 ) AND `user_view`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.001069s ]
+[ sql ] [ SQL ] SELECT * FROM `user_view` WHERE (  `iduser` = 4 ) AND `user_view`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.001055s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `anjian_user_view` [ RunTime:0.002120s ]
+[ sql ] [ SQL ] SELECT `idanjian`,`anjian_number`,`anjian_title`,`anjian_date`,`anjian_status`,`fensuo_name`,`zhonglei_name`,`idkehu`,`kehu_name` FROM `anjian_user_view` WHERE (  `iduser` = 4  AND `anjian_status` = 3 ) AND `anjian_user_view`.`delete_time` IS NULL ORDER BY `idanjian` ASC [ RunTime:0.001840s ]
+---------------------------------------------------------------
+[ 2019-05-18T10:34:40+08:00 ] 192.168.101.137 POST 172.16.101.22/user/hehuoren.list
+[运行时间：0.074315s] [吞吐率：13.46req/s] [内存消耗：1,153.00kb] [文件加载：86]
+[ info ] [ LANG ] /var/www/manager_cmlaw/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'user/hehuoren.list',
+  'route' => 'api/user/hehuoren_list',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'method' => 'get|post',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '172.16.101.22',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => 'application/json, text/plain, */*',
+  'origin' => 'http://172.16.101.22',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36',
+  'referer' => 'http://172.16.101.22/zhangdan-guanli/zhangdan-guanli',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=0uu02npet89l4cae06211jr9ap; USERID=4; USERREALNAME=%E4%BB%BB%E5%B0%8F%E6%9B%BC',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000860s ] mysql:host=172.16.101.20;port=3306;dbname=lawyer_cmlaw;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.000924s ]
+[ sql ] [ SQL ] SELECT `groupid` FROM `auth_group_access` WHERE (  `userid` = 4 ) AND `auth_group_access`.`delete_time` IS NULL [ RunTime:0.000692s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group` [ RunTime:0.001086s ]
+[ sql ] [ SQL ] SELECT `rules` FROM `auth_group` WHERE (  `id` IN (174) ) AND `auth_group`.`delete_time` IS NULL [ RunTime:0.000614s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_rule` [ RunTime:0.000932s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_rule` WHERE  `id` IN (9,10,11,22,23,97,99,134,138,139,135,136,137,15,115,141,117,118,119,156,124,125,120,121,122,142,143,144,145,146,147,123,148,126,127,149,150,128,151,129,130,152,131,132,140,133,153,154,155,157,159,160,161,162,163,158,164,165,166,167,168)  AND `ruleid` = 0  AND `type` = 1 ORDER BY `paixun` DESC [ RunTime:0.001085s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_rule` WHERE  `id` IN (9,10,11,22,23,97,99,134,138,139,135,136,137,15,115,141,117,118,119,156,124,125,120,121,122,142,143,144,145,146,147,123,148,126,127,149,150,128,151,129,130,152,131,132,140,133,153,154,155,157,159,160,161,162,163,158,164,165,166,167,168)  AND `title` = 'user/hehuoren_list' LIMIT 1 [ RunTime:0.000881s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_rule` WHERE  `id` IN (9,10,11,22,23,97,99,134,138,139,135,136,137,15,115,141,117,118,119,156,124,125,120,121,122,142,143,144,145,146,147,123,148,126,127,149,150,128,151,129,130,152,131,132,140,133,153,154,155,157,159,160,161,162,163,158,164,165,166,167,168)  AND `ruleid` IS NULL  AND `type` = 1 ORDER BY `paixun` DESC [ RunTime:0.000764s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_view` [ RunTime:0.001841s ]
+[ sql ] [ SQL ] SELECT * FROM `user_view` WHERE (  `iduser` = 4 ) AND `user_view`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.001150s ]
+[ sql ] [ SQL ] SELECT * FROM `user_view` WHERE (  `iduser` = 4 ) AND `user_view`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.001142s ]
+[ sql ] [ SQL ] SELECT `iduser`,`user_realname`,`bumen_name` FROM `user_view` WHERE (  `idzhiwei` = 2 ) AND `user_view`.`delete_time` IS NULL [ RunTime:0.001194s ]
+---------------------------------------------------------------
+[ 2019-05-18T10:34:40+08:00 ] 192.168.101.137 POST 172.16.101.22/zhangdan/zhangdan.list
+[运行时间：0.116072s] [吞吐率：8.62req/s] [内存消耗：1,484.40kb] [文件加载：91]
+[ info ] [ LANG ] /var/www/manager_cmlaw/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'zhangdan/zhangdan.list',
+  'route' => 'api/zhangdan/zhangdan_list',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'method' => 'get|post',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '172.16.101.22',
+  'connection' => 'keep-alive',
+  'content-length' => '63',
+  'accept' => 'application/json, text/plain, */*',
+  'origin' => 'http://172.16.101.22',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36',
+  'content-type' => 'application/json;charset=UTF-8',
+  'referer' => 'http://172.16.101.22/zhangdan-guanli/zhangdan-guanli',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=0uu02npet89l4cae06211jr9ap; USERID=4; USERREALNAME=%E4%BB%BB%E5%B0%8F%E6%9B%BC',
+)
+[ info ] [ PARAM ] array (
+  'tiaoshu' => 10,
+  'zhangdan_status' => '1',
+  'page' => 1,
+  'type' => 'zhangdan',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000863s ] mysql:host=172.16.101.20;port=3306;dbname=lawyer_cmlaw;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.001035s ]
+[ sql ] [ SQL ] SELECT `groupid` FROM `auth_group_access` WHERE (  `userid` = 4 ) AND `auth_group_access`.`delete_time` IS NULL [ RunTime:0.000658s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group` [ RunTime:0.000947s ]
+[ sql ] [ SQL ] SELECT `rules` FROM `auth_group` WHERE (  `id` IN (174) ) AND `auth_group`.`delete_time` IS NULL [ RunTime:0.000650s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_rule` [ RunTime:0.000957s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_rule` WHERE  `id` IN (9,10,11,22,23,97,99,134,138,139,135,136,137,15,115,141,117,118,119,156,124,125,120,121,122,142,143,144,145,146,147,123,148,126,127,149,150,128,151,129,130,152,131,132,140,133,153,154,155,157,159,160,161,162,163,158,164,165,166,167,168)  AND `ruleid` = 0  AND `type` = 1 ORDER BY `paixun` DESC [ RunTime:0.001024s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_rule` WHERE  `id` IN (9,10,11,22,23,97,99,134,138,139,135,136,137,15,115,141,117,118,119,156,124,125,120,121,122,142,143,144,145,146,147,123,148,126,127,149,150,128,151,129,130,152,131,132,140,133,153,154,155,157,159,160,161,162,163,158,164,165,166,167,168)  AND `title` = 'zhangdan/zhangdan_list' LIMIT 1 [ RunTime:0.000970s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_rule` WHERE  `id` IN (9,10,11,22,23,97,99,134,138,139,135,136,137,15,115,141,117,118,119,156,124,125,120,121,122,142,143,144,145,146,147,123,148,126,127,149,150,128,151,129,130,152,131,132,140,133,153,154,155,157,159,160,161,162,163,158,164,165,166,167,168)  AND `ruleid` IS NULL  AND `type` = 1 ORDER BY `paixun` DESC [ RunTime:0.000801s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_view` [ RunTime:0.002753s ]
+[ sql ] [ SQL ] SELECT * FROM `user_view` WHERE (  `iduser` = 4 ) AND `user_view`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.001161s ]
+[ sql ] [ SQL ] SELECT * FROM `user_view` WHERE (  `iduser` = 4 ) AND `user_view`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.001273s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `anjian_has_user` [ RunTime:0.001168s ]
+[ sql ] [ SQL ] SELECT `anjianid` FROM `anjian_has_user` WHERE (  `userid` = 4 ) AND `anjian_has_user`.`delete_time` IS NULL [ RunTime:0.002099s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zhangdan_1_view` [ RunTime:0.001644s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zhangdan_1_view` WHERE (  `zhangdan_status` LIKE %1%  AND `idanjian` IN (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,137,138,139,140,141,20,145,147,151,155,156,157,158,159,160,163,172,136,176,182,183,184,185,186,189,190,171,211,216,219,222,248,252,255,256,257,258,269,271,270,274,275,277,279,280,281,282,283,284,285,286,287,294,304,306,316,323,332,333,334,336,337,338,344,345,346,324,358,359,360,361,363,364,365,366,369,371,373,387,391,191,394,395,396,401,403,80,370,410,413,415,418,420,422,423,424,425,426,427,428,429,430,432,434,435,436,437,433,441,440,445,462,439,438,446,444,431,442,463,476,477,443,478,479,481,480,483,482,484,485,486,489,493)  AND ( `add_userid` = 4 OR `iduser` = 4 ) ) AND `zhangdan_1_view`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.003199s ]
+[ sql ] [ SQL ] SELECT `idzhangdan`,`zhangdan_number`,`zhangdan_type`,`zhangdan_bizhong`,`zhangdan_date`,`zhangdan_money`,`zhangdan_status`,`user_realname`,`idanjian`,`anjian_number`,`anjian_title`,`create_time`,`zhangdan_jindu`,`zhangdan_fapiao` FROM `zhangdan_1_view` WHERE (  `zhangdan_status` LIKE %1%  AND `idanjian` IN (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,137,138,139,140,141,20,145,147,151,155,156,157,158,159,160,163,172,136,176,182,183,184,185,186,189,190,171,211,216,219,222,248,252,255,256,257,258,269,271,270,274,275,277,279,280,281,282,283,284,285,286,287,294,304,306,316,323,332,333,334,336,337,338,344,345,346,324,358,359,360,361,363,364,365,366,369,371,373,387,391,191,394,395,396,401,403,80,370,410,413,415,418,420,422,423,424,425,426,427,428,429,430,432,434,435,436,437,433,441,440,445,462,439,438,446,444,431,442,463,476,477,443,478,479,481,480,483,482,484,485,486,489,493)  AND ( `add_userid` = 4 OR `iduser` = 4 ) ) AND `zhangdan_1_view`.`delete_time` IS NULL ORDER BY `idzhangdan` DESC LIMIT 0,10 [ RunTime:0.003054s ]
+[ sql ] [ SQL ] SELECT zhangdan_status as status,count(*) as sum FROM `zhangdan_1_view` WHERE (  `idanjian` IN (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,137,138,139,140,141,20,145,147,151,155,156,157,158,159,160,163,172,136,176,182,183,184,185,186,189,190,171,211,216,219,222,248,252,255,256,257,258,269,271,270,274,275,277,279,280,281,282,283,284,285,286,287,294,304,306,316,323,332,333,334,336,337,338,344,345,346,324,358,359,360,361,363,364,365,366,369,371,373,387,391,191,394,395,396,401,403,80,370,410,413,415,418,420,422,423,424,425,426,427,428,429,430,432,434,435,436,437,433,441,440,445,462,439,438,446,444,431,442,463,476,477,443,478,479,481,480,483,482,484,485,486,489,493)  AND ( `add_userid` = 4 OR `iduser` = 4 ) ) AND `zhangdan_1_view`.`delete_time` IS NULL GROUP BY `zhangdan_status` [ RunTime:0.003491s ]
+---------------------------------------------------------------
+[ 2019-05-18T10:34:42+08:00 ] 192.168.101.137 POST 172.16.101.22/zhangdan/zhangdan.list
+[运行时间：0.034507s] [吞吐率：28.98req/s] [内存消耗：1,483.99kb] [文件加载：91]
+[ info ] [ LANG ] /var/www/manager_cmlaw/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'zhangdan/zhangdan.list',
+  'route' => 'api/zhangdan/zhangdan_list',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'method' => 'get|post',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '172.16.101.22',
+  'connection' => 'keep-alive',
+  'content-length' => '63',
+  'accept' => 'application/json, text/plain, */*',
+  'origin' => 'http://172.16.101.22',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36',
+  'content-type' => 'application/json;charset=UTF-8',
+  'referer' => 'http://172.16.101.22/zhangdan-guanli/zhangdan-guanli',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=0uu02npet89l4cae06211jr9ap; USERID=4; USERREALNAME=%E4%BB%BB%E5%B0%8F%E6%9B%BC',
+)
+[ info ] [ PARAM ] array (
+  'page' => 2,
+  'tiaoshu' => 10,
+  'zhangdan_status' => '1',
+  'type' => 'zhangdan',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001631s ] mysql:host=172.16.101.20;port=3306;dbname=lawyer_cmlaw;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.001093s ]
+[ sql ] [ SQL ] SELECT `groupid` FROM `auth_group_access` WHERE (  `userid` = 4 ) AND `auth_group_access`.`delete_time` IS NULL [ RunTime:0.000652s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group` [ RunTime:0.000850s ]
+[ sql ] [ SQL ] SELECT `rules` FROM `auth_group` WHERE (  `id` IN (174) ) AND `auth_group`.`delete_time` IS NULL [ RunTime:0.000563s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_rule` [ RunTime:0.000852s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_rule` WHERE  `id` IN (9,10,11,22,23,97,99,134,138,139,135,136,137,15,115,141,117,118,119,156,124,125,120,121,122,142,143,144,145,146,147,123,148,126,127,149,150,128,151,129,130,152,131,132,140,133,153,154,155,157,159,160,161,162,163,158,164,165,166,167,168)  AND `ruleid` = 0  AND `type` = 1 ORDER BY `paixun` DESC [ RunTime:0.001019s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_rule` WHERE  `id` IN (9,10,11,22,23,97,99,134,138,139,135,136,137,15,115,141,117,118,119,156,124,125,120,121,122,142,143,144,145,146,147,123,148,126,127,149,150,128,151,129,130,152,131,132,140,133,153,154,155,157,159,160,161,162,163,158,164,165,166,167,168)  AND `title` = 'zhangdan/zhangdan_list' LIMIT 1 [ RunTime:0.000830s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_rule` WHERE  `id` IN (9,10,11,22,23,97,99,134,138,139,135,136,137,15,115,141,117,118,119,156,124,125,120,121,122,142,143,144,145,146,147,123,148,126,127,149,150,128,151,129,130,152,131,132,140,133,153,154,155,157,159,160,161,162,163,158,164,165,166,167,168)  AND `ruleid` IS NULL  AND `type` = 1 ORDER BY `paixun` DESC [ RunTime:0.000733s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_view` [ RunTime:0.001384s ]
+[ sql ] [ SQL ] SELECT * FROM `user_view` WHERE (  `iduser` = 4 ) AND `user_view`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.001131s ]
+[ sql ] [ SQL ] SELECT * FROM `user_view` WHERE (  `iduser` = 4 ) AND `user_view`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.001010s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `anjian_has_user` [ RunTime:0.000795s ]
+[ sql ] [ SQL ] SELECT `anjianid` FROM `anjian_has_user` WHERE (  `userid` = 4 ) AND `anjian_has_user`.`delete_time` IS NULL [ RunTime:0.001222s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zhangdan_1_view` [ RunTime:0.001570s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zhangdan_1_view` WHERE (  `zhangdan_status` LIKE %1%  AND `idanjian` IN (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,137,138,139,140,141,20,145,147,151,155,156,157,158,159,160,163,172,136,176,182,183,184,185,186,189,190,171,211,216,219,222,248,252,255,256,257,258,269,271,270,274,275,277,279,280,281,282,283,284,285,286,287,294,304,306,316,323,332,333,334,336,337,338,344,345,346,324,358,359,360,361,363,364,365,366,369,371,373,387,391,191,394,395,396,401,403,80,370,410,413,415,418,420,422,423,424,425,426,427,428,429,430,432,434,435,436,437,433,441,440,445,462,439,438,446,444,431,442,463,476,477,443,478,479,481,480,483,482,484,485,486,489,493)  AND ( `add_userid` = 4 OR `iduser` = 4 ) ) AND `zhangdan_1_view`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.002652s ]
+[ sql ] [ SQL ] SELECT `idzhangdan`,`zhangdan_number`,`zhangdan_type`,`zhangdan_bizhong`,`zhangdan_date`,`zhangdan_money`,`zhangdan_status`,`user_realname`,`idanjian`,`anjian_number`,`anjian_title`,`create_time`,`zhangdan_jindu`,`zhangdan_fapiao` FROM `zhangdan_1_view` WHERE (  `zhangdan_status` LIKE %1%  AND `idanjian` IN (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,137,138,139,140,141,20,145,147,151,155,156,157,158,159,160,163,172,136,176,182,183,184,185,186,189,190,171,211,216,219,222,248,252,255,256,257,258,269,271,270,274,275,277,279,280,281,282,283,284,285,286,287,294,304,306,316,323,332,333,334,336,337,338,344,345,346,324,358,359,360,361,363,364,365,366,369,371,373,387,391,191,394,395,396,401,403,80,370,410,413,415,418,420,422,423,424,425,426,427,428,429,430,432,434,435,436,437,433,441,440,445,462,439,438,446,444,431,442,463,476,477,443,478,479,481,480,483,482,484,485,486,489,493)  AND ( `add_userid` = 4 OR `iduser` = 4 ) ) AND `zhangdan_1_view`.`delete_time` IS NULL ORDER BY `idzhangdan` DESC LIMIT 10,10 [ RunTime:0.002977s ]
+[ sql ] [ SQL ] SELECT zhangdan_status as status,count(*) as sum FROM `zhangdan_1_view` WHERE (  `idanjian` IN (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,137,138,139,140,141,20,145,147,151,155,156,157,158,159,160,163,172,136,176,182,183,184,185,186,189,190,171,211,216,219,222,248,252,255,256,257,258,269,271,270,274,275,277,279,280,281,282,283,284,285,286,287,294,304,306,316,323,332,333,334,336,337,338,344,345,346,324,358,359,360,361,363,364,365,366,369,371,373,387,391,191,394,395,396,401,403,80,370,410,413,415,418,420,422,423,424,425,426,427,428,429,430,432,434,435,436,437,433,441,440,445,462,439,438,446,444,431,442,463,476,477,443,478,479,481,480,483,482,484,485,486,489,493)  AND ( `add_userid` = 4 OR `iduser` = 4 ) ) AND `zhangdan_1_view`.`delete_time` IS NULL GROUP BY `zhangdan_status` [ RunTime:0.002689s ]
+---------------------------------------------------------------
+[ 2019-05-18T10:34:49+08:00 ] 192.168.101.137 POST 172.16.101.22/zhangdan/zhangdan.list
+[运行时间：0.040648s] [吞吐率：24.60req/s] [内存消耗：1,483.99kb] [文件加载：91]
+[ info ] [ LANG ] /var/www/manager_cmlaw/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'zhangdan/zhangdan.list',
+  'route' => 'api/zhangdan/zhangdan_list',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'method' => 'get|post',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '172.16.101.22',
+  'connection' => 'keep-alive',
+  'content-length' => '63',
+  'accept' => 'application/json, text/plain, */*',
+  'origin' => 'http://172.16.101.22',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36',
+  'content-type' => 'application/json;charset=UTF-8',
+  'referer' => 'http://172.16.101.22/zhangdan-guanli/zhangdan-guanli',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=0uu02npet89l4cae06211jr9ap; USERID=4; USERREALNAME=%E4%BB%BB%E5%B0%8F%E6%9B%BC',
+)
+[ info ] [ PARAM ] array (
+  'page' => 1,
+  'tiaoshu' => 10,
+  'zhangdan_status' => '1',
+  'type' => 'zhangdan',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001884s ] mysql:host=172.16.101.20;port=3306;dbname=lawyer_cmlaw;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.001309s ]
+[ sql ] [ SQL ] SELECT `groupid` FROM `auth_group_access` WHERE (  `userid` = 4 ) AND `auth_group_access`.`delete_time` IS NULL [ RunTime:0.000703s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group` [ RunTime:0.001038s ]
+[ sql ] [ SQL ] SELECT `rules` FROM `auth_group` WHERE (  `id` IN (174) ) AND `auth_group`.`delete_time` IS NULL [ RunTime:0.000681s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_rule` [ RunTime:0.000961s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_rule` WHERE  `id` IN (9,10,11,22,23,97,99,134,138,139,135,136,137,15,115,141,117,118,119,156,124,125,120,121,122,142,143,144,145,146,147,123,148,126,127,149,150,128,151,129,130,152,131,132,140,133,153,154,155,157,159,160,161,162,163,158,164,165,166,167,168)  AND `ruleid` = 0  AND `type` = 1 ORDER BY `paixun` DESC [ RunTime:0.001177s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_rule` WHERE  `id` IN (9,10,11,22,23,97,99,134,138,139,135,136,137,15,115,141,117,118,119,156,124,125,120,121,122,142,143,144,145,146,147,123,148,126,127,149,150,128,151,129,130,152,131,132,140,133,153,154,155,157,159,160,161,162,163,158,164,165,166,167,168)  AND `title` = 'zhangdan/zhangdan_list' LIMIT 1 [ RunTime:0.000862s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_rule` WHERE  `id` IN (9,10,11,22,23,97,99,134,138,139,135,136,137,15,115,141,117,118,119,156,124,125,120,121,122,142,143,144,145,146,147,123,148,126,127,149,150,128,151,129,130,152,131,132,140,133,153,154,155,157,159,160,161,162,163,158,164,165,166,167,168)  AND `ruleid` IS NULL  AND `type` = 1 ORDER BY `paixun` DESC [ RunTime:0.000748s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_view` [ RunTime:0.001526s ]
+[ sql ] [ SQL ] SELECT * FROM `user_view` WHERE (  `iduser` = 4 ) AND `user_view`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.001192s ]
+[ sql ] [ SQL ] SELECT * FROM `user_view` WHERE (  `iduser` = 4 ) AND `user_view`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.001018s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `anjian_has_user` [ RunTime:0.000813s ]
+[ sql ] [ SQL ] SELECT `anjianid` FROM `anjian_has_user` WHERE (  `userid` = 4 ) AND `anjian_has_user`.`delete_time` IS NULL [ RunTime:0.001268s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zhangdan_1_view` [ RunTime:0.001784s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zhangdan_1_view` WHERE (  `zhangdan_status` LIKE %1%  AND `idanjian` IN (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,137,138,139,140,141,20,145,147,151,155,156,157,158,159,160,163,172,136,176,182,183,184,185,186,189,190,171,211,216,219,222,248,252,255,256,257,258,269,271,270,274,275,277,279,280,281,282,283,284,285,286,287,294,304,306,316,323,332,333,334,336,337,338,344,345,346,324,358,359,360,361,363,364,365,366,369,371,373,387,391,191,394,395,396,401,403,80,370,410,413,415,418,420,422,423,424,425,426,427,428,429,430,432,434,435,436,437,433,441,440,445,462,439,438,446,444,431,442,463,476,477,443,478,479,481,480,483,482,484,485,486,489,493)  AND ( `add_userid` = 4 OR `iduser` = 4 ) ) AND `zhangdan_1_view`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.002834s ]
+[ sql ] [ SQL ] SELECT `idzhangdan`,`zhangdan_number`,`zhangdan_type`,`zhangdan_bizhong`,`zhangdan_date`,`zhangdan_money`,`zhangdan_status`,`user_realname`,`idanjian`,`anjian_number`,`anjian_title`,`create_time`,`zhangdan_jindu`,`zhangdan_fapiao` FROM `zhangdan_1_view` WHERE (  `zhangdan_status` LIKE %1%  AND `idanjian` IN (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,137,138,139,140,141,20,145,147,151,155,156,157,158,159,160,163,172,136,176,182,183,184,185,186,189,190,171,211,216,219,222,248,252,255,256,257,258,269,271,270,274,275,277,279,280,281,282,283,284,285,286,287,294,304,306,316,323,332,333,334,336,337,338,344,345,346,324,358,359,360,361,363,364,365,366,369,371,373,387,391,191,394,395,396,401,403,80,370,410,413,415,418,420,422,423,424,425,426,427,428,429,430,432,434,435,436,437,433,441,440,445,462,439,438,446,444,431,442,463,476,477,443,478,479,481,480,483,482,484,485,486,489,493)  AND ( `add_userid` = 4 OR `iduser` = 4 ) ) AND `zhangdan_1_view`.`delete_time` IS NULL ORDER BY `idzhangdan` DESC LIMIT 0,10 [ RunTime:0.003666s ]
+[ sql ] [ SQL ] SELECT zhangdan_status as status,count(*) as sum FROM `zhangdan_1_view` WHERE (  `idanjian` IN (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,137,138,139,140,141,20,145,147,151,155,156,157,158,159,160,163,172,136,176,182,183,184,185,186,189,190,171,211,216,219,222,248,252,255,256,257,258,269,271,270,274,275,277,279,280,281,282,283,284,285,286,287,294,304,306,316,323,332,333,334,336,337,338,344,345,346,324,358,359,360,361,363,364,365,366,369,371,373,387,391,191,394,395,396,401,403,80,370,410,413,415,418,420,422,423,424,425,426,427,428,429,430,432,434,435,436,437,433,441,440,445,462,439,438,446,444,431,442,463,476,477,443,478,479,481,480,483,482,484,485,486,489,493)  AND ( `add_userid` = 4 OR `iduser` = 4 ) ) AND `zhangdan_1_view`.`delete_time` IS NULL GROUP BY `zhangdan_status` [ RunTime:0.003263s ]
+---------------------------------------------------------------
+[ 2019-05-18T10:34:52+08:00 ] 192.168.101.137 POST 172.16.101.22/zhangdan/zhangdan.list
+[运行时间：0.033845s] [吞吐率：29.55req/s] [内存消耗：1,483.99kb] [文件加载：91]
+[ info ] [ LANG ] /var/www/manager_cmlaw/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'zhangdan/zhangdan.list',
+  'route' => 'api/zhangdan/zhangdan_list',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'method' => 'get|post',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '172.16.101.22',
+  'connection' => 'keep-alive',
+  'content-length' => '63',
+  'accept' => 'application/json, text/plain, */*',
+  'origin' => 'http://172.16.101.22',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36',
+  'content-type' => 'application/json;charset=UTF-8',
+  'referer' => 'http://172.16.101.22/zhangdan-guanli/zhangdan-guanli',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=0uu02npet89l4cae06211jr9ap; USERID=4; USERREALNAME=%E4%BB%BB%E5%B0%8F%E6%9B%BC',
+)
+[ info ] [ PARAM ] array (
+  'page' => 2,
+  'tiaoshu' => 10,
+  'zhangdan_status' => '1',
+  'type' => 'zhangdan',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001389s ] mysql:host=172.16.101.20;port=3306;dbname=lawyer_cmlaw;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.001057s ]
+[ sql ] [ SQL ] SELECT `groupid` FROM `auth_group_access` WHERE (  `userid` = 4 ) AND `auth_group_access`.`delete_time` IS NULL [ RunTime:0.000621s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group` [ RunTime:0.000896s ]
+[ sql ] [ SQL ] SELECT `rules` FROM `auth_group` WHERE (  `id` IN (174) ) AND `auth_group`.`delete_time` IS NULL [ RunTime:0.000597s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_rule` [ RunTime:0.000871s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_rule` WHERE  `id` IN (9,10,11,22,23,97,99,134,138,139,135,136,137,15,115,141,117,118,119,156,124,125,120,121,122,142,143,144,145,146,147,123,148,126,127,149,150,128,151,129,130,152,131,132,140,133,153,154,155,157,159,160,161,162,163,158,164,165,166,167,168)  AND `ruleid` = 0  AND `type` = 1 ORDER BY `paixun` DESC [ RunTime:0.001029s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_rule` WHERE  `id` IN (9,10,11,22,23,97,99,134,138,139,135,136,137,15,115,141,117,118,119,156,124,125,120,121,122,142,143,144,145,146,147,123,148,126,127,149,150,128,151,129,130,152,131,132,140,133,153,154,155,157,159,160,161,162,163,158,164,165,166,167,168)  AND `title` = 'zhangdan/zhangdan_list' LIMIT 1 [ RunTime:0.000854s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_rule` WHERE  `id` IN (9,10,11,22,23,97,99,134,138,139,135,136,137,15,115,141,117,118,119,156,124,125,120,121,122,142,143,144,145,146,147,123,148,126,127,149,150,128,151,129,130,152,131,132,140,133,153,154,155,157,159,160,161,162,163,158,164,165,166,167,168)  AND `ruleid` IS NULL  AND `type` = 1 ORDER BY `paixun` DESC [ RunTime:0.000755s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_view` [ RunTime:0.001444s ]
+[ sql ] [ SQL ] SELECT * FROM `user_view` WHERE (  `iduser` = 4 ) AND `user_view`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.001105s ]
+[ sql ] [ SQL ] SELECT * FROM `user_view` WHERE (  `iduser` = 4 ) AND `user_view`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.001004s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `anjian_has_user` [ RunTime:0.000814s ]
+[ sql ] [ SQL ] SELECT `anjianid` FROM `anjian_has_user` WHERE (  `userid` = 4 ) AND `anjian_has_user`.`delete_time` IS NULL [ RunTime:0.001230s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zhangdan_1_view` [ RunTime:0.001570s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zhangdan_1_view` WHERE (  `zhangdan_status` LIKE %1%  AND `idanjian` IN (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,137,138,139,140,141,20,145,147,151,155,156,157,158,159,160,163,172,136,176,182,183,184,185,186,189,190,171,211,216,219,222,248,252,255,256,257,258,269,271,270,274,275,277,279,280,281,282,283,284,285,286,287,294,304,306,316,323,332,333,334,336,337,338,344,345,346,324,358,359,360,361,363,364,365,366,369,371,373,387,391,191,394,395,396,401,403,80,370,410,413,415,418,420,422,423,424,425,426,427,428,429,430,432,434,435,436,437,433,441,440,445,462,439,438,446,444,431,442,463,476,477,443,478,479,481,480,483,482,484,485,486,489,493)  AND ( `add_userid` = 4 OR `iduser` = 4 ) ) AND `zhangdan_1_view`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.002692s ]
+[ sql ] [ SQL ] SELECT `idzhangdan`,`zhangdan_number`,`zhangdan_type`,`zhangdan_bizhong`,`zhangdan_date`,`zhangdan_money`,`zhangdan_status`,`user_realname`,`idanjian`,`anjian_number`,`anjian_title`,`create_time`,`zhangdan_jindu`,`zhangdan_fapiao` FROM `zhangdan_1_view` WHERE (  `zhangdan_status` LIKE %1%  AND `idanjian` IN (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,137,138,139,140,141,20,145,147,151,155,156,157,158,159,160,163,172,136,176,182,183,184,185,186,189,190,171,211,216,219,222,248,252,255,256,257,258,269,271,270,274,275,277,279,280,281,282,283,284,285,286,287,294,304,306,316,323,332,333,334,336,337,338,344,345,346,324,358,359,360,361,363,364,365,366,369,371,373,387,391,191,394,395,396,401,403,80,370,410,413,415,418,420,422,423,424,425,426,427,428,429,430,432,434,435,436,437,433,441,440,445,462,439,438,446,444,431,442,463,476,477,443,478,479,481,480,483,482,484,485,486,489,493)  AND ( `add_userid` = 4 OR `iduser` = 4 ) ) AND `zhangdan_1_view`.`delete_time` IS NULL ORDER BY `idzhangdan` DESC LIMIT 10,10 [ RunTime:0.002919s ]
+[ sql ] [ SQL ] SELECT zhangdan_status as status,count(*) as sum FROM `zhangdan_1_view` WHERE (  `idanjian` IN (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,137,138,139,140,141,20,145,147,151,155,156,157,158,159,160,163,172,136,176,182,183,184,185,186,189,190,171,211,216,219,222,248,252,255,256,257,258,269,271,270,274,275,277,279,280,281,282,283,284,285,286,287,294,304,306,316,323,332,333,334,336,337,338,344,345,346,324,358,359,360,361,363,364,365,366,369,371,373,387,391,191,394,395,396,401,403,80,370,410,413,415,418,420,422,423,424,425,426,427,428,429,430,432,434,435,436,437,433,441,440,445,462,439,438,446,444,431,442,463,476,477,443,478,479,481,480,483,482,484,485,486,489,493)  AND ( `add_userid` = 4 OR `iduser` = 4 ) ) AND `zhangdan_1_view`.`delete_time` IS NULL GROUP BY `zhangdan_status` [ RunTime:0.002688s ]
+---------------------------------------------------------------
+[ 2019-05-18T10:34:56+08:00 ] 192.168.101.137 POST 172.16.101.22/zhangdan/zhangdan.list
+[运行时间：0.035152s] [吞吐率：28.45req/s] [内存消耗：1,483.99kb] [文件加载：91]
+[ info ] [ LANG ] /var/www/manager_cmlaw/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'zhangdan/zhangdan.list',
+  'route' => 'api/zhangdan/zhangdan_list',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'method' => 'get|post',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '172.16.101.22',
+  'connection' => 'keep-alive',
+  'content-length' => '63',
+  'accept' => 'application/json, text/plain, */*',
+  'origin' => 'http://172.16.101.22',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36',
+  'content-type' => 'application/json;charset=UTF-8',
+  'referer' => 'http://172.16.101.22/zhangdan-guanli/zhangdan-guanli',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=0uu02npet89l4cae06211jr9ap; USERID=4; USERREALNAME=%E4%BB%BB%E5%B0%8F%E6%9B%BC',
+)
+[ info ] [ PARAM ] array (
+  'page' => 1,
+  'tiaoshu' => 10,
+  'zhangdan_status' => '1',
+  'type' => 'zhangdan',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001309s ] mysql:host=172.16.101.20;port=3306;dbname=lawyer_cmlaw;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.001434s ]
+[ sql ] [ SQL ] SELECT `groupid` FROM `auth_group_access` WHERE (  `userid` = 4 ) AND `auth_group_access`.`delete_time` IS NULL [ RunTime:0.000737s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group` [ RunTime:0.000998s ]
+[ sql ] [ SQL ] SELECT `rules` FROM `auth_group` WHERE (  `id` IN (174) ) AND `auth_group`.`delete_time` IS NULL [ RunTime:0.000646s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_rule` [ RunTime:0.000880s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_rule` WHERE  `id` IN (9,10,11,22,23,97,99,134,138,139,135,136,137,15,115,141,117,118,119,156,124,125,120,121,122,142,143,144,145,146,147,123,148,126,127,149,150,128,151,129,130,152,131,132,140,133,153,154,155,157,159,160,161,162,163,158,164,165,166,167,168)  AND `ruleid` = 0  AND `type` = 1 ORDER BY `paixun` DESC [ RunTime:0.001058s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_rule` WHERE  `id` IN (9,10,11,22,23,97,99,134,138,139,135,136,137,15,115,141,117,118,119,156,124,125,120,121,122,142,143,144,145,146,147,123,148,126,127,149,150,128,151,129,130,152,131,132,140,133,153,154,155,157,159,160,161,162,163,158,164,165,166,167,168)  AND `title` = 'zhangdan/zhangdan_list' LIMIT 1 [ RunTime:0.000905s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_rule` WHERE  `id` IN (9,10,11,22,23,97,99,134,138,139,135,136,137,15,115,141,117,118,119,156,124,125,120,121,122,142,143,144,145,146,147,123,148,126,127,149,150,128,151,129,130,152,131,132,140,133,153,154,155,157,159,160,161,162,163,158,164,165,166,167,168)  AND `ruleid` IS NULL  AND `type` = 1 ORDER BY `paixun` DESC [ RunTime:0.000773s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_view` [ RunTime:0.001394s ]
+[ sql ] [ SQL ] SELECT * FROM `user_view` WHERE (  `iduser` = 4 ) AND `user_view`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.001192s ]
+[ sql ] [ SQL ] SELECT * FROM `user_view` WHERE (  `iduser` = 4 ) AND `user_view`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.001033s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `anjian_has_user` [ RunTime:0.000815s ]
+[ sql ] [ SQL ] SELECT `anjianid` FROM `anjian_has_user` WHERE (  `userid` = 4 ) AND `anjian_has_user`.`delete_time` IS NULL [ RunTime:0.001241s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zhangdan_1_view` [ RunTime:0.001631s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zhangdan_1_view` WHERE (  `zhangdan_status` LIKE %1%  AND `idanjian` IN (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,137,138,139,140,141,20,145,147,151,155,156,157,158,159,160,163,172,136,176,182,183,184,185,186,189,190,171,211,216,219,222,248,252,255,256,257,258,269,271,270,274,275,277,279,280,281,282,283,284,285,286,287,294,304,306,316,323,332,333,334,336,337,338,344,345,346,324,358,359,360,361,363,364,365,366,369,371,373,387,391,191,394,395,396,401,403,80,370,410,413,415,418,420,422,423,424,425,426,427,428,429,430,432,434,435,436,437,433,441,440,445,462,439,438,446,444,431,442,463,476,477,443,478,479,481,480,483,482,484,485,486,489,493)  AND ( `add_userid` = 4 OR `iduser` = 4 ) ) AND `zhangdan_1_view`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.002676s ]
+[ sql ] [ SQL ] SELECT `idzhangdan`,`zhangdan_number`,`zhangdan_type`,`zhangdan_bizhong`,`zhangdan_date`,`zhangdan_money`,`zhangdan_status`,`user_realname`,`idanjian`,`anjian_number`,`anjian_title`,`create_time`,`zhangdan_jindu`,`zhangdan_fapiao` FROM `zhangdan_1_view` WHERE (  `zhangdan_status` LIKE %1%  AND `idanjian` IN (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,137,138,139,140,141,20,145,147,151,155,156,157,158,159,160,163,172,136,176,182,183,184,185,186,189,190,171,211,216,219,222,248,252,255,256,257,258,269,271,270,274,275,277,279,280,281,282,283,284,285,286,287,294,304,306,316,323,332,333,334,336,337,338,344,345,346,324,358,359,360,361,363,364,365,366,369,371,373,387,391,191,394,395,396,401,403,80,370,410,413,415,418,420,422,423,424,425,426,427,428,429,430,432,434,435,436,437,433,441,440,445,462,439,438,446,444,431,442,463,476,477,443,478,479,481,480,483,482,484,485,486,489,493)  AND ( `add_userid` = 4 OR `iduser` = 4 ) ) AND `zhangdan_1_view`.`delete_time` IS NULL ORDER BY `idzhangdan` DESC LIMIT 0,10 [ RunTime:0.002898s ]
+[ sql ] [ SQL ] SELECT zhangdan_status as status,count(*) as sum FROM `zhangdan_1_view` WHERE (  `idanjian` IN (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,137,138,139,140,141,20,145,147,151,155,156,157,158,159,160,163,172,136,176,182,183,184,185,186,189,190,171,211,216,219,222,248,252,255,256,257,258,269,271,270,274,275,277,279,280,281,282,283,284,285,286,287,294,304,306,316,323,332,333,334,336,337,338,344,345,346,324,358,359,360,361,363,364,365,366,369,371,373,387,391,191,394,395,396,401,403,80,370,410,413,415,418,420,422,423,424,425,426,427,428,429,430,432,434,435,436,437,433,441,440,445,462,439,438,446,444,431,442,463,476,477,443,478,479,481,480,483,482,484,485,486,489,493)  AND ( `add_userid` = 4 OR `iduser` = 4 ) ) AND `zhangdan_1_view`.`delete_time` IS NULL GROUP BY `zhangdan_status` [ RunTime:0.002683s ]
+---------------------------------------------------------------
+[ 2019-05-18T10:34:59+08:00 ] 192.168.101.137 POST 172.16.101.22/zhangdan/zhangdan.list
+[运行时间：0.034549s] [吞吐率：28.94req/s] [内存消耗：1,483.99kb] [文件加载：91]
+[ info ] [ LANG ] /var/www/manager_cmlaw/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'zhangdan/zhangdan.list',
+  'route' => 'api/zhangdan/zhangdan_list',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'method' => 'get|post',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '172.16.101.22',
+  'connection' => 'keep-alive',
+  'content-length' => '63',
+  'accept' => 'application/json, text/plain, */*',
+  'origin' => 'http://172.16.101.22',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36',
+  'content-type' => 'application/json;charset=UTF-8',
+  'referer' => 'http://172.16.101.22/zhangdan-guanli/zhangdan-guanli',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=0uu02npet89l4cae06211jr9ap; USERID=4; USERREALNAME=%E4%BB%BB%E5%B0%8F%E6%9B%BC',
+)
+[ info ] [ PARAM ] array (
+  'page' => 2,
+  'tiaoshu' => 10,
+  'zhangdan_status' => '1',
+  'type' => 'zhangdan',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001529s ] mysql:host=172.16.101.20;port=3306;dbname=lawyer_cmlaw;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.001108s ]
+[ sql ] [ SQL ] SELECT `groupid` FROM `auth_group_access` WHERE (  `userid` = 4 ) AND `auth_group_access`.`delete_time` IS NULL [ RunTime:0.000717s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group` [ RunTime:0.000914s ]
+[ sql ] [ SQL ] SELECT `rules` FROM `auth_group` WHERE (  `id` IN (174) ) AND `auth_group`.`delete_time` IS NULL [ RunTime:0.000610s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_rule` [ RunTime:0.000901s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_rule` WHERE  `id` IN (9,10,11,22,23,97,99,134,138,139,135,136,137,15,115,141,117,118,119,156,124,125,120,121,122,142,143,144,145,146,147,123,148,126,127,149,150,128,151,129,130,152,131,132,140,133,153,154,155,157,159,160,161,162,163,158,164,165,166,167,168)  AND `ruleid` = 0  AND `type` = 1 ORDER BY `paixun` DESC [ RunTime:0.000998s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_rule` WHERE  `id` IN (9,10,11,22,23,97,99,134,138,139,135,136,137,15,115,141,117,118,119,156,124,125,120,121,122,142,143,144,145,146,147,123,148,126,127,149,150,128,151,129,130,152,131,132,140,133,153,154,155,157,159,160,161,162,163,158,164,165,166,167,168)  AND `title` = 'zhangdan/zhangdan_list' LIMIT 1 [ RunTime:0.000859s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_rule` WHERE  `id` IN (9,10,11,22,23,97,99,134,138,139,135,136,137,15,115,141,117,118,119,156,124,125,120,121,122,142,143,144,145,146,147,123,148,126,127,149,150,128,151,129,130,152,131,132,140,133,153,154,155,157,159,160,161,162,163,158,164,165,166,167,168)  AND `ruleid` IS NULL  AND `type` = 1 ORDER BY `paixun` DESC [ RunTime:0.000762s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_view` [ RunTime:0.001468s ]
+[ sql ] [ SQL ] SELECT * FROM `user_view` WHERE (  `iduser` = 4 ) AND `user_view`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.001165s ]
+[ sql ] [ SQL ] SELECT * FROM `user_view` WHERE (  `iduser` = 4 ) AND `user_view`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.000990s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `anjian_has_user` [ RunTime:0.000830s ]
+[ sql ] [ SQL ] SELECT `anjianid` FROM `anjian_has_user` WHERE (  `userid` = 4 ) AND `anjian_has_user`.`delete_time` IS NULL [ RunTime:0.001260s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zhangdan_1_view` [ RunTime:0.001616s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zhangdan_1_view` WHERE (  `zhangdan_status` LIKE %1%  AND `idanjian` IN (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,137,138,139,140,141,20,145,147,151,155,156,157,158,159,160,163,172,136,176,182,183,184,185,186,189,190,171,211,216,219,222,248,252,255,256,257,258,269,271,270,274,275,277,279,280,281,282,283,284,285,286,287,294,304,306,316,323,332,333,334,336,337,338,344,345,346,324,358,359,360,361,363,364,365,366,369,371,373,387,391,191,394,395,396,401,403,80,370,410,413,415,418,420,422,423,424,425,426,427,428,429,430,432,434,435,436,437,433,441,440,445,462,439,438,446,444,431,442,463,476,477,443,478,479,481,480,483,482,484,485,486,489,493)  AND ( `add_userid` = 4 OR `iduser` = 4 ) ) AND `zhangdan_1_view`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.002660s ]
+[ sql ] [ SQL ] SELECT `idzhangdan`,`zhangdan_number`,`zhangdan_type`,`zhangdan_bizhong`,`zhangdan_date`,`zhangdan_money`,`zhangdan_status`,`user_realname`,`idanjian`,`anjian_number`,`anjian_title`,`create_time`,`zhangdan_jindu`,`zhangdan_fapiao` FROM `zhangdan_1_view` WHERE (  `zhangdan_status` LIKE %1%  AND `idanjian` IN (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,137,138,139,140,141,20,145,147,151,155,156,157,158,159,160,163,172,136,176,182,183,184,185,186,189,190,171,211,216,219,222,248,252,255,256,257,258,269,271,270,274,275,277,279,280,281,282,283,284,285,286,287,294,304,306,316,323,332,333,334,336,337,338,344,345,346,324,358,359,360,361,363,364,365,366,369,371,373,387,391,191,394,395,396,401,403,80,370,410,413,415,418,420,422,423,424,425,426,427,428,429,430,432,434,435,436,437,433,441,440,445,462,439,438,446,444,431,442,463,476,477,443,478,479,481,480,483,482,484,485,486,489,493)  AND ( `add_userid` = 4 OR `iduser` = 4 ) ) AND `zhangdan_1_view`.`delete_time` IS NULL ORDER BY `idzhangdan` DESC LIMIT 10,10 [ RunTime:0.002948s ]
+[ sql ] [ SQL ] SELECT zhangdan_status as status,count(*) as sum FROM `zhangdan_1_view` WHERE (  `idanjian` IN (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,137,138,139,140,141,20,145,147,151,155,156,157,158,159,160,163,172,136,176,182,183,184,185,186,189,190,171,211,216,219,222,248,252,255,256,257,258,269,271,270,274,275,277,279,280,281,282,283,284,285,286,287,294,304,306,316,323,332,333,334,336,337,338,344,345,346,324,358,359,360,361,363,364,365,366,369,371,373,387,391,191,394,395,396,401,403,80,370,410,413,415,418,420,422,423,424,425,426,427,428,429,430,432,434,435,436,437,433,441,440,445,462,439,438,446,444,431,442,463,476,477,443,478,479,481,480,483,482,484,485,486,489,493)  AND ( `add_userid` = 4 OR `iduser` = 4 ) ) AND `zhangdan_1_view`.`delete_time` IS NULL GROUP BY `zhangdan_status` [ RunTime:0.002690s ]
+---------------------------------------------------------------
+[ 2019-05-18T10:35:02+08:00 ] 192.168.101.137 POST 172.16.101.22/zhangdan/zhangdan.list
+[运行时间：0.042428s] [吞吐率：23.57req/s] [内存消耗：1,483.99kb] [文件加载：91]
+[ info ] [ LANG ] /var/www/manager_cmlaw/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'zhangdan/zhangdan.list',
+  'route' => 'api/zhangdan/zhangdan_list',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'method' => 'get|post',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '172.16.101.22',
+  'connection' => 'keep-alive',
+  'content-length' => '63',
+  'accept' => 'application/json, text/plain, */*',
+  'origin' => 'http://172.16.101.22',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36',
+  'content-type' => 'application/json;charset=UTF-8',
+  'referer' => 'http://172.16.101.22/zhangdan-guanli/zhangdan-guanli',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=0uu02npet89l4cae06211jr9ap; USERID=4; USERREALNAME=%E4%BB%BB%E5%B0%8F%E6%9B%BC',
+)
+[ info ] [ PARAM ] array (
+  'page' => 1,
+  'tiaoshu' => 10,
+  'zhangdan_status' => '1',
+  'type' => 'zhangdan',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001823s ] mysql:host=172.16.101.20;port=3306;dbname=lawyer_cmlaw;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.001202s ]
+[ sql ] [ SQL ] SELECT `groupid` FROM `auth_group_access` WHERE (  `userid` = 4 ) AND `auth_group_access`.`delete_time` IS NULL [ RunTime:0.000750s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group` [ RunTime:0.000984s ]
+[ sql ] [ SQL ] SELECT `rules` FROM `auth_group` WHERE (  `id` IN (174) ) AND `auth_group`.`delete_time` IS NULL [ RunTime:0.000733s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_rule` [ RunTime:0.001123s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_rule` WHERE  `id` IN (9,10,11,22,23,97,99,134,138,139,135,136,137,15,115,141,117,118,119,156,124,125,120,121,122,142,143,144,145,146,147,123,148,126,127,149,150,128,151,129,130,152,131,132,140,133,153,154,155,157,159,160,161,162,163,158,164,165,166,167,168)  AND `ruleid` = 0  AND `type` = 1 ORDER BY `paixun` DESC [ RunTime:0.001409s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_rule` WHERE  `id` IN (9,10,11,22,23,97,99,134,138,139,135,136,137,15,115,141,117,118,119,156,124,125,120,121,122,142,143,144,145,146,147,123,148,126,127,149,150,128,151,129,130,152,131,132,140,133,153,154,155,157,159,160,161,162,163,158,164,165,166,167,168)  AND `title` = 'zhangdan/zhangdan_list' LIMIT 1 [ RunTime:0.001092s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_rule` WHERE  `id` IN (9,10,11,22,23,97,99,134,138,139,135,136,137,15,115,141,117,118,119,156,124,125,120,121,122,142,143,144,145,146,147,123,148,126,127,149,150,128,151,129,130,152,131,132,140,133,153,154,155,157,159,160,161,162,163,158,164,165,166,167,168)  AND `ruleid` IS NULL  AND `type` = 1 ORDER BY `paixun` DESC [ RunTime:0.000956s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_view` [ RunTime:0.002120s ]
+[ sql ] [ SQL ] SELECT * FROM `user_view` WHERE (  `iduser` = 4 ) AND `user_view`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.001351s ]
+[ sql ] [ SQL ] SELECT * FROM `user_view` WHERE (  `iduser` = 4 ) AND `user_view`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.001298s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `anjian_has_user` [ RunTime:0.001025s ]
+[ sql ] [ SQL ] SELECT `anjianid` FROM `anjian_has_user` WHERE (  `userid` = 4 ) AND `anjian_has_user`.`delete_time` IS NULL [ RunTime:0.002021s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zhangdan_1_view` [ RunTime:0.002131s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zhangdan_1_view` WHERE (  `zhangdan_status` LIKE %1%  AND `idanjian` IN (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,137,138,139,140,141,20,145,147,151,155,156,157,158,159,160,163,172,136,176,182,183,184,185,186,189,190,171,211,216,219,222,248,252,255,256,257,258,269,271,270,274,275,277,279,280,281,282,283,284,285,286,287,294,304,306,316,323,332,333,334,336,337,338,344,345,346,324,358,359,360,361,363,364,365,366,369,371,373,387,391,191,394,395,396,401,403,80,370,410,413,415,418,420,422,423,424,425,426,427,428,429,430,432,434,435,436,437,433,441,440,445,462,439,438,446,444,431,442,463,476,477,443,478,479,481,480,483,482,484,485,486,489,493)  AND ( `add_userid` = 4 OR `iduser` = 4 ) ) AND `zhangdan_1_view`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.003690s ]
+[ sql ] [ SQL ] SELECT `idzhangdan`,`zhangdan_number`,`zhangdan_type`,`zhangdan_bizhong`,`zhangdan_date`,`zhangdan_money`,`zhangdan_status`,`user_realname`,`idanjian`,`anjian_number`,`anjian_title`,`create_time`,`zhangdan_jindu`,`zhangdan_fapiao` FROM `zhangdan_1_view` WHERE (  `zhangdan_status` LIKE %1%  AND `idanjian` IN (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,137,138,139,140,141,20,145,147,151,155,156,157,158,159,160,163,172,136,176,182,183,184,185,186,189,190,171,211,216,219,222,248,252,255,256,257,258,269,271,270,274,275,277,279,280,281,282,283,284,285,286,287,294,304,306,316,323,332,333,334,336,337,338,344,345,346,324,358,359,360,361,363,364,365,366,369,371,373,387,391,191,394,395,396,401,403,80,370,410,413,415,418,420,422,423,424,425,426,427,428,429,430,432,434,435,436,437,433,441,440,445,462,439,438,446,444,431,442,463,476,477,443,478,479,481,480,483,482,484,485,486,489,493)  AND ( `add_userid` = 4 OR `iduser` = 4 ) ) AND `zhangdan_1_view`.`delete_time` IS NULL ORDER BY `idzhangdan` DESC LIMIT 0,10 [ RunTime:0.004232s ]
+[ sql ] [ SQL ] SELECT zhangdan_status as status,count(*) as sum FROM `zhangdan_1_view` WHERE (  `idanjian` IN (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,137,138,139,140,141,20,145,147,151,155,156,157,158,159,160,163,172,136,176,182,183,184,185,186,189,190,171,211,216,219,222,248,252,255,256,257,258,269,271,270,274,275,277,279,280,281,282,283,284,285,286,287,294,304,306,316,323,332,333,334,336,337,338,344,345,346,324,358,359,360,361,363,364,365,366,369,371,373,387,391,191,394,395,396,401,403,80,370,410,413,415,418,420,422,423,424,425,426,427,428,429,430,432,434,435,436,437,433,441,440,445,462,439,438,446,444,431,442,463,476,477,443,478,479,481,480,483,482,484,485,486,489,493)  AND ( `add_userid` = 4 OR `iduser` = 4 ) ) AND `zhangdan_1_view`.`delete_time` IS NULL GROUP BY `zhangdan_status` [ RunTime:0.004032s ]
+---------------------------------------------------------------
+[ 2019-05-18T10:35:03+08:00 ] 192.168.101.137 POST 172.16.101.22/zhangdan/zhangdan.list
+[运行时间：0.035465s] [吞吐率：28.20req/s] [内存消耗：1,483.99kb] [文件加载：91]
+[ info ] [ LANG ] /var/www/manager_cmlaw/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'zhangdan/zhangdan.list',
+  'route' => 'api/zhangdan/zhangdan_list',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'method' => 'get|post',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '172.16.101.22',
+  'connection' => 'keep-alive',
+  'content-length' => '63',
+  'accept' => 'application/json, text/plain, */*',
+  'origin' => 'http://172.16.101.22',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36',
+  'content-type' => 'application/json;charset=UTF-8',
+  'referer' => 'http://172.16.101.22/zhangdan-guanli/zhangdan-guanli',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=0uu02npet89l4cae06211jr9ap; USERID=4; USERREALNAME=%E4%BB%BB%E5%B0%8F%E6%9B%BC',
+)
+[ info ] [ PARAM ] array (
+  'page' => 2,
+  'tiaoshu' => 10,
+  'zhangdan_status' => '1',
+  'type' => 'zhangdan',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001851s ] mysql:host=172.16.101.20;port=3306;dbname=lawyer_cmlaw;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.001270s ]
+[ sql ] [ SQL ] SELECT `groupid` FROM `auth_group_access` WHERE (  `userid` = 4 ) AND `auth_group_access`.`delete_time` IS NULL [ RunTime:0.000784s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group` [ RunTime:0.000911s ]
+[ sql ] [ SQL ] SELECT `rules` FROM `auth_group` WHERE (  `id` IN (174) ) AND `auth_group`.`delete_time` IS NULL [ RunTime:0.000607s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_rule` [ RunTime:0.000878s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_rule` WHERE  `id` IN (9,10,11,22,23,97,99,134,138,139,135,136,137,15,115,141,117,118,119,156,124,125,120,121,122,142,143,144,145,146,147,123,148,126,127,149,150,128,151,129,130,152,131,132,140,133,153,154,155,157,159,160,161,162,163,158,164,165,166,167,168)  AND `ruleid` = 0  AND `type` = 1 ORDER BY `paixun` DESC [ RunTime:0.001071s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_rule` WHERE  `id` IN (9,10,11,22,23,97,99,134,138,139,135,136,137,15,115,141,117,118,119,156,124,125,120,121,122,142,143,144,145,146,147,123,148,126,127,149,150,128,151,129,130,152,131,132,140,133,153,154,155,157,159,160,161,162,163,158,164,165,166,167,168)  AND `title` = 'zhangdan/zhangdan_list' LIMIT 1 [ RunTime:0.001036s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_rule` WHERE  `id` IN (9,10,11,22,23,97,99,134,138,139,135,136,137,15,115,141,117,118,119,156,124,125,120,121,122,142,143,144,145,146,147,123,148,126,127,149,150,128,151,129,130,152,131,132,140,133,153,154,155,157,159,160,161,162,163,158,164,165,166,167,168)  AND `ruleid` IS NULL  AND `type` = 1 ORDER BY `paixun` DESC [ RunTime:0.000773s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_view` [ RunTime:0.001462s ]
+[ sql ] [ SQL ] SELECT * FROM `user_view` WHERE (  `iduser` = 4 ) AND `user_view`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.001149s ]
+[ sql ] [ SQL ] SELECT * FROM `user_view` WHERE (  `iduser` = 4 ) AND `user_view`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.001092s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `anjian_has_user` [ RunTime:0.000820s ]
+[ sql ] [ SQL ] SELECT `anjianid` FROM `anjian_has_user` WHERE (  `userid` = 4 ) AND `anjian_has_user`.`delete_time` IS NULL [ RunTime:0.001321s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zhangdan_1_view` [ RunTime:0.001669s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zhangdan_1_view` WHERE (  `zhangdan_status` LIKE %1%  AND `idanjian` IN (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,137,138,139,140,141,20,145,147,151,155,156,157,158,159,160,163,172,136,176,182,183,184,185,186,189,190,171,211,216,219,222,248,252,255,256,257,258,269,271,270,274,275,277,279,280,281,282,283,284,285,286,287,294,304,306,316,323,332,333,334,336,337,338,344,345,346,324,358,359,360,361,363,364,365,366,369,371,373,387,391,191,394,395,396,401,403,80,370,410,413,415,418,420,422,423,424,425,426,427,428,429,430,432,434,435,436,437,433,441,440,445,462,439,438,446,444,431,442,463,476,477,443,478,479,481,480,483,482,484,485,486,489,493)  AND ( `add_userid` = 4 OR `iduser` = 4 ) ) AND `zhangdan_1_view`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.002723s ]
+[ sql ] [ SQL ] SELECT `idzhangdan`,`zhangdan_number`,`zhangdan_type`,`zhangdan_bizhong`,`zhangdan_date`,`zhangdan_money`,`zhangdan_status`,`user_realname`,`idanjian`,`anjian_number`,`anjian_title`,`create_time`,`zhangdan_jindu`,`zhangdan_fapiao` FROM `zhangdan_1_view` WHERE (  `zhangdan_status` LIKE %1%  AND `idanjian` IN (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,137,138,139,140,141,20,145,147,151,155,156,157,158,159,160,163,172,136,176,182,183,184,185,186,189,190,171,211,216,219,222,248,252,255,256,257,258,269,271,270,274,275,277,279,280,281,282,283,284,285,286,287,294,304,306,316,323,332,333,334,336,337,338,344,345,346,324,358,359,360,361,363,364,365,366,369,371,373,387,391,191,394,395,396,401,403,80,370,410,413,415,418,420,422,423,424,425,426,427,428,429,430,432,434,435,436,437,433,441,440,445,462,439,438,446,444,431,442,463,476,477,443,478,479,481,480,483,482,484,485,486,489,493)  AND ( `add_userid` = 4 OR `iduser` = 4 ) ) AND `zhangdan_1_view`.`delete_time` IS NULL ORDER BY `idzhangdan` DESC LIMIT 10,10 [ RunTime:0.003074s ]
+[ sql ] [ SQL ] SELECT zhangdan_status as status,count(*) as sum FROM `zhangdan_1_view` WHERE (  `idanjian` IN (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,137,138,139,140,141,20,145,147,151,155,156,157,158,159,160,163,172,136,176,182,183,184,185,186,189,190,171,211,216,219,222,248,252,255,256,257,258,269,271,270,274,275,277,279,280,281,282,283,284,285,286,287,294,304,306,316,323,332,333,334,336,337,338,344,345,346,324,358,359,360,361,363,364,365,366,369,371,373,387,391,191,394,395,396,401,403,80,370,410,413,415,418,420,422,423,424,425,426,427,428,429,430,432,434,435,436,437,433,441,440,445,462,439,438,446,444,431,442,463,476,477,443,478,479,481,480,483,482,484,485,486,489,493)  AND ( `add_userid` = 4 OR `iduser` = 4 ) ) AND `zhangdan_1_view`.`delete_time` IS NULL GROUP BY `zhangdan_status` [ RunTime:0.002755s ]
+---------------------------------------------------------------
+[ 2019-05-18T10:35:23+08:00 ] 192.168.101.137 POST 172.16.101.22/zhangdan/zhangdan.list
+[运行时间：0.043429s] [吞吐率：23.03req/s] [内存消耗：1,483.99kb] [文件加载：91]
+[ info ] [ LANG ] /var/www/manager_cmlaw/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'zhangdan/zhangdan.list',
+  'route' => 'api/zhangdan/zhangdan_list',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'method' => 'get|post',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '172.16.101.22',
+  'connection' => 'keep-alive',
+  'content-length' => '63',
+  'accept' => 'application/json, text/plain, */*',
+  'origin' => 'http://172.16.101.22',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36',
+  'content-type' => 'application/json;charset=UTF-8',
+  'referer' => 'http://172.16.101.22/zhangdan-guanli/zhangdan-guanli',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=0uu02npet89l4cae06211jr9ap; USERID=4; USERREALNAME=%E4%BB%BB%E5%B0%8F%E6%9B%BC',
+)
+[ info ] [ PARAM ] array (
+  'page' => 1,
+  'tiaoshu' => 10,
+  'zhangdan_status' => '1',
+  'type' => 'zhangdan',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001535s ] mysql:host=172.16.101.20;port=3306;dbname=lawyer_cmlaw;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.001198s ]
+[ sql ] [ SQL ] SELECT `groupid` FROM `auth_group_access` WHERE (  `userid` = 4 ) AND `auth_group_access`.`delete_time` IS NULL [ RunTime:0.000702s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group` [ RunTime:0.001009s ]
+[ sql ] [ SQL ] SELECT `rules` FROM `auth_group` WHERE (  `id` IN (174) ) AND `auth_group`.`delete_time` IS NULL [ RunTime:0.000685s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_rule` [ RunTime:0.001019s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_rule` WHERE  `id` IN (9,10,11,22,23,97,99,134,138,139,135,136,137,15,115,141,117,118,119,156,124,125,120,121,122,142,143,144,145,146,147,123,148,126,127,149,150,128,151,129,130,152,131,132,140,133,153,154,155,157,159,160,161,162,163,158,164,165,166,167,168)  AND `ruleid` = 0  AND `type` = 1 ORDER BY `paixun` DESC [ RunTime:0.001076s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_rule` WHERE  `id` IN (9,10,11,22,23,97,99,134,138,139,135,136,137,15,115,141,117,118,119,156,124,125,120,121,122,142,143,144,145,146,147,123,148,126,127,149,150,128,151,129,130,152,131,132,140,133,153,154,155,157,159,160,161,162,163,158,164,165,166,167,168)  AND `title` = 'zhangdan/zhangdan_list' LIMIT 1 [ RunTime:0.000999s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_rule` WHERE  `id` IN (9,10,11,22,23,97,99,134,138,139,135,136,137,15,115,141,117,118,119,156,124,125,120,121,122,142,143,144,145,146,147,123,148,126,127,149,150,128,151,129,130,152,131,132,140,133,153,154,155,157,159,160,161,162,163,158,164,165,166,167,168)  AND `ruleid` IS NULL  AND `type` = 1 ORDER BY `paixun` DESC [ RunTime:0.000778s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_view` [ RunTime:0.001489s ]
+[ sql ] [ SQL ] SELECT * FROM `user_view` WHERE (  `iduser` = 4 ) AND `user_view`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.001208s ]
+[ sql ] [ SQL ] SELECT * FROM `user_view` WHERE (  `iduser` = 4 ) AND `user_view`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.001246s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `anjian_has_user` [ RunTime:0.000854s ]
+[ sql ] [ SQL ] SELECT `anjianid` FROM `anjian_has_user` WHERE (  `userid` = 4 ) AND `anjian_has_user`.`delete_time` IS NULL [ RunTime:0.001324s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zhangdan_1_view` [ RunTime:0.001644s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zhangdan_1_view` WHERE (  `zhangdan_status` LIKE %1%  AND `idanjian` IN (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,137,138,139,140,141,20,145,147,151,155,156,157,158,159,160,163,172,136,176,182,183,184,185,186,189,190,171,211,216,219,222,248,252,255,256,257,258,269,271,270,274,275,277,279,280,281,282,283,284,285,286,287,294,304,306,316,323,332,333,334,336,337,338,344,345,346,324,358,359,360,361,363,364,365,366,369,371,373,387,391,191,394,395,396,401,403,80,370,410,413,415,418,420,422,423,424,425,426,427,428,429,430,432,434,435,436,437,433,441,440,445,462,439,438,446,444,431,442,463,476,477,443,478,479,481,480,483,482,484,485,486,489,493)  AND ( `add_userid` = 4 OR `iduser` = 4 ) ) AND `zhangdan_1_view`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.002826s ]
+[ sql ] [ SQL ] SELECT `idzhangdan`,`zhangdan_number`,`zhangdan_type`,`zhangdan_bizhong`,`zhangdan_date`,`zhangdan_money`,`zhangdan_status`,`user_realname`,`idanjian`,`anjian_number`,`anjian_title`,`create_time`,`zhangdan_jindu`,`zhangdan_fapiao` FROM `zhangdan_1_view` WHERE (  `zhangdan_status` LIKE %1%  AND `idanjian` IN (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,137,138,139,140,141,20,145,147,151,155,156,157,158,159,160,163,172,136,176,182,183,184,185,186,189,190,171,211,216,219,222,248,252,255,256,257,258,269,271,270,274,275,277,279,280,281,282,283,284,285,286,287,294,304,306,316,323,332,333,334,336,337,338,344,345,346,324,358,359,360,361,363,364,365,366,369,371,373,387,391,191,394,395,396,401,403,80,370,410,413,415,418,420,422,423,424,425,426,427,428,429,430,432,434,435,436,437,433,441,440,445,462,439,438,446,444,431,442,463,476,477,443,478,479,481,480,483,482,484,485,486,489,493)  AND ( `add_userid` = 4 OR `iduser` = 4 ) ) AND `zhangdan_1_view`.`delete_time` IS NULL ORDER BY `idzhangdan` DESC LIMIT 0,10 [ RunTime:0.002936s ]
+[ sql ] [ SQL ] SELECT zhangdan_status as status,count(*) as sum FROM `zhangdan_1_view` WHERE (  `idanjian` IN (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,137,138,139,140,141,20,145,147,151,155,156,157,158,159,160,163,172,136,176,182,183,184,185,186,189,190,171,211,216,219,222,248,252,255,256,257,258,269,271,270,274,275,277,279,280,281,282,283,284,285,286,287,294,304,306,316,323,332,333,334,336,337,338,344,345,346,324,358,359,360,361,363,364,365,366,369,371,373,387,391,191,394,395,396,401,403,80,370,410,413,415,418,420,422,423,424,425,426,427,428,429,430,432,434,435,436,437,433,441,440,445,462,439,438,446,444,431,442,463,476,477,443,478,479,481,480,483,482,484,485,486,489,493)  AND ( `add_userid` = 4 OR `iduser` = 4 ) ) AND `zhangdan_1_view`.`delete_time` IS NULL GROUP BY `zhangdan_status` [ RunTime:0.002692s ]
+---------------------------------------------------------------
+[ 2019-05-18T10:35:25+08:00 ] 192.168.101.137 POST 172.16.101.22/quanxian/is.quanxian
+[运行时间：0.021292s] [吞吐率：46.97req/s] [内存消耗：1,139.17kb] [文件加载：87]
+[ info ] [ LANG ] /var/www/manager_cmlaw/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'quanxian/is.quanxian',
+  'route' => 'api/quanxian/isQuanxian',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'method' => 'get|post',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '172.16.101.22',
+  'connection' => 'keep-alive',
+  'content-length' => '45',
+  'accept' => 'application/json, text/plain, */*',
+  'origin' => 'http://172.16.101.22',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36',
+  'content-type' => 'application/json;charset=UTF-8',
+  'referer' => 'http://172.16.101.22/zhangdan-guanli/zhangdan-chuanjian',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=0uu02npet89l4cae06211jr9ap; USERID=4; USERREALNAME=%E4%BB%BB%E5%B0%8F%E6%9B%BC',
+)
+[ info ] [ PARAM ] array (
+  'url' => '/zhangdan-guanli/zhangdan-chuanjian',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001548s ] mysql:host=172.16.101.20;port=3306;dbname=lawyer_cmlaw;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.001154s ]
+[ sql ] [ SQL ] SELECT `groupid` FROM `auth_group_access` WHERE (  `userid` = 4 ) AND `auth_group_access`.`delete_time` IS NULL [ RunTime:0.000935s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group` [ RunTime:0.001065s ]
+[ sql ] [ SQL ] SELECT `rules` FROM `auth_group` WHERE (  `id` IN (174) ) AND `auth_group`.`delete_time` IS NULL [ RunTime:0.000671s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_rule` [ RunTime:0.000881s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_rule` WHERE  `id` IN (9,10,11,22,23,97,99,134,138,139,135,136,137,15,115,141,117,118,119,156,124,125,120,121,122,142,143,144,145,146,147,123,148,126,127,149,150,128,151,129,130,152,131,132,140,133,153,154,155,157,159,160,161,162,163,158,164,165,166,167,168)  AND `ruleid` = 0  AND `type` = 1 ORDER BY `paixun` DESC [ RunTime:0.001101s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_rule` WHERE  `id` IN (9,10,11,22,23,97,99,134,138,139,135,136,137,15,115,141,117,118,119,156,124,125,120,121,122,142,143,144,145,146,147,123,148,126,127,149,150,128,151,129,130,152,131,132,140,133,153,154,155,157,159,160,161,162,163,158,164,165,166,167,168)  AND `title` = 'quanxian/isquanxian' LIMIT 1 [ RunTime:0.000916s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_rule` WHERE  `id` IN (9,10,11,22,23,97,99,134,138,139,135,136,137,15,115,141,117,118,119,156,124,125,120,121,122,142,143,144,145,146,147,123,148,126,127,149,150,128,151,129,130,152,131,132,140,133,153,154,155,157,159,160,161,162,163,158,164,165,166,167,168)  AND `ruleid` IS NULL  AND `type` = 1 ORDER BY `paixun` DESC [ RunTime:0.000843s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_view` [ RunTime:0.001493s ]
+[ sql ] [ SQL ] SELECT * FROM `user_view` WHERE (  `iduser` = 4 ) AND `user_view`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.001190s ]
+[ sql ] [ SQL ] SELECT * FROM `user_view` WHERE (  `iduser` = 4 ) AND `user_view`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.001071s ]
+[ sql ] [ SQL ] SELECT `id` FROM `auth_rule` WHERE (  `title` = '/zhangdan-guanli/zhangdan-chuanjian' ) AND `auth_rule`.`delete_time` IS NULL [ RunTime:0.000614s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_group` WHERE (  `status` = 1 ) AND `auth_group`.`delete_time` IS NULL [ RunTime:0.000702s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_group_access` WHERE (  `groupid` IN (1,174)  AND `userid` = 4 ) AND `auth_group_access`.`delete_time` IS NULL [ RunTime:0.000693s ]
+---------------------------------------------------------------
+[ 2019-05-18T10:35:25+08:00 ] 192.168.101.137 POST 172.16.101.22/user/hehuoren.list
+[运行时间：0.018427s] [吞吐率：54.27req/s] [内存消耗：1,153.00kb] [文件加载：86]
+[ info ] [ LANG ] /var/www/manager_cmlaw/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'user/hehuoren.list',
+  'route' => 'api/user/hehuoren_list',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'method' => 'get|post',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '172.16.101.22',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => 'application/json, text/plain, */*',
+  'origin' => 'http://172.16.101.22',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36',
+  'referer' => 'http://172.16.101.22/zhangdan-guanli/zhangdan-chuanjian',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=0uu02npet89l4cae06211jr9ap; USERID=4; USERREALNAME=%E4%BB%BB%E5%B0%8F%E6%9B%BC',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001179s ] mysql:host=172.16.101.20;port=3306;dbname=lawyer_cmlaw;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.000894s ]
+[ sql ] [ SQL ] SELECT `groupid` FROM `auth_group_access` WHERE (  `userid` = 4 ) AND `auth_group_access`.`delete_time` IS NULL [ RunTime:0.000609s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group` [ RunTime:0.000922s ]
+[ sql ] [ SQL ] SELECT `rules` FROM `auth_group` WHERE (  `id` IN (174) ) AND `auth_group`.`delete_time` IS NULL [ RunTime:0.000580s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_rule` [ RunTime:0.000903s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_rule` WHERE  `id` IN (9,10,11,22,23,97,99,134,138,139,135,136,137,15,115,141,117,118,119,156,124,125,120,121,122,142,143,144,145,146,147,123,148,126,127,149,150,128,151,129,130,152,131,132,140,133,153,154,155,157,159,160,161,162,163,158,164,165,166,167,168)  AND `ruleid` = 0  AND `type` = 1 ORDER BY `paixun` DESC [ RunTime:0.001086s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_rule` WHERE  `id` IN (9,10,11,22,23,97,99,134,138,139,135,136,137,15,115,141,117,118,119,156,124,125,120,121,122,142,143,144,145,146,147,123,148,126,127,149,150,128,151,129,130,152,131,132,140,133,153,154,155,157,159,160,161,162,163,158,164,165,166,167,168)  AND `title` = 'user/hehuoren_list' LIMIT 1 [ RunTime:0.000933s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_rule` WHERE  `id` IN (9,10,11,22,23,97,99,134,138,139,135,136,137,15,115,141,117,118,119,156,124,125,120,121,122,142,143,144,145,146,147,123,148,126,127,149,150,128,151,129,130,152,131,132,140,133,153,154,155,157,159,160,161,162,163,158,164,165,166,167,168)  AND `ruleid` IS NULL  AND `type` = 1 ORDER BY `paixun` DESC [ RunTime:0.000809s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_view` [ RunTime:0.001473s ]
+[ sql ] [ SQL ] SELECT * FROM `user_view` WHERE (  `iduser` = 4 ) AND `user_view`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.001116s ]
+[ sql ] [ SQL ] SELECT * FROM `user_view` WHERE (  `iduser` = 4 ) AND `user_view`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.001047s ]
+[ sql ] [ SQL ] SELECT `iduser`,`user_realname`,`bumen_name` FROM `user_view` WHERE (  `idzhiwei` = 2 ) AND `user_view`.`delete_time` IS NULL [ RunTime:0.000909s ]
+---------------------------------------------------------------
+[ 2019-05-18T10:35:25+08:00 ] 192.168.101.137 POST 172.16.101.22/anjian/anjian.list
+[运行时间：0.037134s] [吞吐率：26.93req/s] [内存消耗：1,188.83kb] [文件加载：87]
+[ info ] [ LANG ] /var/www/manager_cmlaw/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'anjian/anjian.list',
+  'route' => 'api/anjian/anjian_list',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'method' => 'get|post',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '172.16.101.22',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => 'application/json, text/plain, */*',
+  'origin' => 'http://172.16.101.22',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36',
+  'referer' => 'http://172.16.101.22/zhangdan-guanli/zhangdan-chuanjian',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=0uu02npet89l4cae06211jr9ap; USERID=4; USERREALNAME=%E4%BB%BB%E5%B0%8F%E6%9B%BC',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001056s ] mysql:host=172.16.101.20;port=3306;dbname=lawyer_cmlaw;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.001065s ]
+[ sql ] [ SQL ] SELECT `groupid` FROM `auth_group_access` WHERE (  `userid` = 4 ) AND `auth_group_access`.`delete_time` IS NULL [ RunTime:0.000692s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group` [ RunTime:0.000922s ]
+[ sql ] [ SQL ] SELECT `rules` FROM `auth_group` WHERE (  `id` IN (174) ) AND `auth_group`.`delete_time` IS NULL [ RunTime:0.000642s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_rule` [ RunTime:0.000927s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_rule` WHERE  `id` IN (9,10,11,22,23,97,99,134,138,139,135,136,137,15,115,141,117,118,119,156,124,125,120,121,122,142,143,144,145,146,147,123,148,126,127,149,150,128,151,129,130,152,131,132,140,133,153,154,155,157,159,160,161,162,163,158,164,165,166,167,168)  AND `ruleid` = 0  AND `type` = 1 ORDER BY `paixun` DESC [ RunTime:0.001049s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_rule` WHERE  `id` IN (9,10,11,22,23,97,99,134,138,139,135,136,137,15,115,141,117,118,119,156,124,125,120,121,122,142,143,144,145,146,147,123,148,126,127,149,150,128,151,129,130,152,131,132,140,133,153,154,155,157,159,160,161,162,163,158,164,165,166,167,168)  AND `title` = 'anjian/anjian_list' LIMIT 1 [ RunTime:0.000866s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_rule` WHERE  `id` IN (9,10,11,22,23,97,99,134,138,139,135,136,137,15,115,141,117,118,119,156,124,125,120,121,122,142,143,144,145,146,147,123,148,126,127,149,150,128,151,129,130,152,131,132,140,133,153,154,155,157,159,160,161,162,163,158,164,165,166,167,168)  AND `ruleid` IS NULL  AND `type` = 1 ORDER BY `paixun` DESC [ RunTime:0.000770s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_view` [ RunTime:0.001438s ]
+[ sql ] [ SQL ] SELECT * FROM `user_view` WHERE (  `iduser` = 4 ) AND `user_view`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.001233s ]
+[ sql ] [ SQL ] SELECT * FROM `user_view` WHERE (  `iduser` = 4 ) AND `user_view`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.001083s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `anjian_user_view` [ RunTime:0.001696s ]
+[ sql ] [ SQL ] SELECT `idanjian`,`anjian_number`,`anjian_title`,`anjian_date`,`anjian_status`,`fensuo_name`,`zhonglei_name`,`idkehu`,`kehu_name` FROM `anjian_user_view` WHERE (  `iduser` = 4  AND `anjian_status` = 3 ) AND `anjian_user_view`.`delete_time` IS NULL ORDER BY `idanjian` ASC [ RunTime:0.001713s ]
+---------------------------------------------------------------
+[ 2019-05-18T10:35:25+08:00 ] 192.168.101.137 POST 172.16.101.22/bizhong/bizhong.name
+[运行时间：0.077436s] [吞吐率：12.91req/s] [内存消耗：1,170.59kb] [文件加载：87]
+[ info ] [ LANG ] /var/www/manager_cmlaw/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'bizhong/bizhong.name',
+  'route' => 'api/system/bizhongName',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'method' => 'get|post',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '172.16.101.22',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => 'application/json, text/plain, */*',
+  'origin' => 'http://172.16.101.22',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36',
+  'referer' => 'http://172.16.101.22/zhangdan-guanli/zhangdan-chuanjian',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=0uu02npet89l4cae06211jr9ap; USERID=4; USERREALNAME=%E4%BB%BB%E5%B0%8F%E6%9B%BC',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001032s ] mysql:host=172.16.101.20;port=3306;dbname=lawyer_cmlaw;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.000902s ]
+[ sql ] [ SQL ] SELECT `groupid` FROM `auth_group_access` WHERE (  `userid` = 4 ) AND `auth_group_access`.`delete_time` IS NULL [ RunTime:0.000623s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group` [ RunTime:0.000898s ]
+[ sql ] [ SQL ] SELECT `rules` FROM `auth_group` WHERE (  `id` IN (174) ) AND `auth_group`.`delete_time` IS NULL [ RunTime:0.000589s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_rule` [ RunTime:0.000916s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_rule` WHERE  `id` IN (9,10,11,22,23,97,99,134,138,139,135,136,137,15,115,141,117,118,119,156,124,125,120,121,122,142,143,144,145,146,147,123,148,126,127,149,150,128,151,129,130,152,131,132,140,133,153,154,155,157,159,160,161,162,163,158,164,165,166,167,168)  AND `ruleid` = 0  AND `type` = 1 ORDER BY `paixun` DESC [ RunTime:0.001030s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_rule` WHERE  `id` IN (9,10,11,22,23,97,99,134,138,139,135,136,137,15,115,141,117,118,119,156,124,125,120,121,122,142,143,144,145,146,147,123,148,126,127,149,150,128,151,129,130,152,131,132,140,133,153,154,155,157,159,160,161,162,163,158,164,165,166,167,168)  AND `title` = 'system/bizhongname' LIMIT 1 [ RunTime:0.000925s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_rule` WHERE  `id` IN (9,10,11,22,23,97,99,134,138,139,135,136,137,15,115,141,117,118,119,156,124,125,120,121,122,142,143,144,145,146,147,123,148,126,127,149,150,128,151,129,130,152,131,132,140,133,153,154,155,157,159,160,161,162,163,158,164,165,166,167,168)  AND `ruleid` IS NULL  AND `type` = 1 ORDER BY `paixun` DESC [ RunTime:0.000776s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_view` [ RunTime:0.001405s ]
+[ sql ] [ SQL ] SELECT * FROM `user_view` WHERE (  `iduser` = 4 ) AND `user_view`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.001095s ]
+[ sql ] [ SQL ] SELECT * FROM `user_view` WHERE (  `iduser` = 4 ) AND `user_view`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.001035s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zhangdan_bizhong` [ RunTime:0.001158s ]
+[ sql ] [ SQL ] SELECT `bizhong_name` FROM `zhangdan_bizhong` WHERE `zhangdan_bizhong`.`delete_time` IS NULL GROUP BY `bizhong_name` [ RunTime:0.000676s ]
+---------------------------------------------------------------
+[ 2019-05-18T10:35:28+08:00 ] 192.168.101.137 POST 172.16.101.22/quanxian/is.quanxian
+[运行时间：0.021507s] [吞吐率：46.50req/s] [内存消耗：1,139.16kb] [文件加载：87]
+[ info ] [ LANG ] /var/www/manager_cmlaw/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'quanxian/is.quanxian',
+  'route' => 'api/quanxian/isQuanxian',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'method' => 'get|post',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '172.16.101.22',
+  'connection' => 'keep-alive',
+  'content-length' => '41',
+  'accept' => 'application/json, text/plain, */*',
+  'origin' => 'http://172.16.101.22',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36',
+  'content-type' => 'application/json;charset=UTF-8',
+  'referer' => 'http://172.16.101.22/zhangdan-guanli/zhangdan-jishi',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=0uu02npet89l4cae06211jr9ap; USERID=4; USERREALNAME=%E4%BB%BB%E5%B0%8F%E6%9B%BC',
+)
+[ info ] [ PARAM ] array (
+  'url' => '/zhangdan-guanli/zhangdan-jishi',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001415s ] mysql:host=172.16.101.20;port=3306;dbname=lawyer_cmlaw;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.001130s ]
+[ sql ] [ SQL ] SELECT `groupid` FROM `auth_group_access` WHERE (  `userid` = 4 ) AND `auth_group_access`.`delete_time` IS NULL [ RunTime:0.000707s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group` [ RunTime:0.000893s ]
+[ sql ] [ SQL ] SELECT `rules` FROM `auth_group` WHERE (  `id` IN (174) ) AND `auth_group`.`delete_time` IS NULL [ RunTime:0.000668s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_rule` [ RunTime:0.000891s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_rule` WHERE  `id` IN (9,10,11,22,23,97,99,134,138,139,135,136,137,15,115,141,117,118,119,156,124,125,120,121,122,142,143,144,145,146,147,123,148,126,127,149,150,128,151,129,130,152,131,132,140,133,153,154,155,157,159,160,161,162,163,158,164,165,166,167,168)  AND `ruleid` = 0  AND `type` = 1 ORDER BY `paixun` DESC [ RunTime:0.001100s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_rule` WHERE  `id` IN (9,10,11,22,23,97,99,134,138,139,135,136,137,15,115,141,117,118,119,156,124,125,120,121,122,142,143,144,145,146,147,123,148,126,127,149,150,128,151,129,130,152,131,132,140,133,153,154,155,157,159,160,161,162,163,158,164,165,166,167,168)  AND `title` = 'quanxian/isquanxian' LIMIT 1 [ RunTime:0.000931s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_rule` WHERE  `id` IN (9,10,11,22,23,97,99,134,138,139,135,136,137,15,115,141,117,118,119,156,124,125,120,121,122,142,143,144,145,146,147,123,148,126,127,149,150,128,151,129,130,152,131,132,140,133,153,154,155,157,159,160,161,162,163,158,164,165,166,167,168)  AND `ruleid` IS NULL  AND `type` = 1 ORDER BY `paixun` DESC [ RunTime:0.000760s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_view` [ RunTime:0.001511s ]
+[ sql ] [ SQL ] SELECT * FROM `user_view` WHERE (  `iduser` = 4 ) AND `user_view`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.001081s ]
+[ sql ] [ SQL ] SELECT * FROM `user_view` WHERE (  `iduser` = 4 ) AND `user_view`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.001018s ]
+[ sql ] [ SQL ] SELECT `id` FROM `auth_rule` WHERE (  `title` = '/zhangdan-guanli/zhangdan-jishi' ) AND `auth_rule`.`delete_time` IS NULL [ RunTime:0.000594s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_group` WHERE (  `status` = 1 ) AND `auth_group`.`delete_time` IS NULL [ RunTime:0.000701s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_group_access` WHERE (  `groupid` IN (1,174)  AND `userid` = 4 ) AND `auth_group_access`.`delete_time` IS NULL [ RunTime:0.000566s ]
+---------------------------------------------------------------
+[ 2019-05-18T10:35:28+08:00 ] 192.168.101.137 POST 172.16.101.22/anjian/anjian.list
+[运行时间：0.036033s] [吞吐率：27.75req/s] [内存消耗：1,188.83kb] [文件加载：87]
+[ info ] [ LANG ] /var/www/manager_cmlaw/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'anjian/anjian.list',
+  'route' => 'api/anjian/anjian_list',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'method' => 'get|post',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '172.16.101.22',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => 'application/json, text/plain, */*',
+  'origin' => 'http://172.16.101.22',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36',
+  'referer' => 'http://172.16.101.22/zhangdan-guanli/zhangdan-jishi',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=0uu02npet89l4cae06211jr9ap; USERID=4; USERREALNAME=%E4%BB%BB%E5%B0%8F%E6%9B%BC',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001066s ] mysql:host=172.16.101.20;port=3306;dbname=lawyer_cmlaw;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.001041s ]
+[ sql ] [ SQL ] SELECT `groupid` FROM `auth_group_access` WHERE (  `userid` = 4 ) AND `auth_group_access`.`delete_time` IS NULL [ RunTime:0.000666s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group` [ RunTime:0.000950s ]
+[ sql ] [ SQL ] SELECT `rules` FROM `auth_group` WHERE (  `id` IN (174) ) AND `auth_group`.`delete_time` IS NULL [ RunTime:0.000661s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_rule` [ RunTime:0.000868s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_rule` WHERE  `id` IN (9,10,11,22,23,97,99,134,138,139,135,136,137,15,115,141,117,118,119,156,124,125,120,121,122,142,143,144,145,146,147,123,148,126,127,149,150,128,151,129,130,152,131,132,140,133,153,154,155,157,159,160,161,162,163,158,164,165,166,167,168)  AND `ruleid` = 0  AND `type` = 1 ORDER BY `paixun` DESC [ RunTime:0.001035s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_rule` WHERE  `id` IN (9,10,11,22,23,97,99,134,138,139,135,136,137,15,115,141,117,118,119,156,124,125,120,121,122,142,143,144,145,146,147,123,148,126,127,149,150,128,151,129,130,152,131,132,140,133,153,154,155,157,159,160,161,162,163,158,164,165,166,167,168)  AND `title` = 'anjian/anjian_list' LIMIT 1 [ RunTime:0.000916s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_rule` WHERE  `id` IN (9,10,11,22,23,97,99,134,138,139,135,136,137,15,115,141,117,118,119,156,124,125,120,121,122,142,143,144,145,146,147,123,148,126,127,149,150,128,151,129,130,152,131,132,140,133,153,154,155,157,159,160,161,162,163,158,164,165,166,167,168)  AND `ruleid` IS NULL  AND `type` = 1 ORDER BY `paixun` DESC [ RunTime:0.000784s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_view` [ RunTime:0.001393s ]
+[ sql ] [ SQL ] SELECT * FROM `user_view` WHERE (  `iduser` = 4 ) AND `user_view`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.001168s ]
+[ sql ] [ SQL ] SELECT * FROM `user_view` WHERE (  `iduser` = 4 ) AND `user_view`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.001071s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `anjian_user_view` [ RunTime:0.001586s ]
+[ sql ] [ SQL ] SELECT `idanjian`,`anjian_number`,`anjian_title`,`anjian_date`,`anjian_status`,`fensuo_name`,`zhonglei_name`,`idkehu`,`kehu_name` FROM `anjian_user_view` WHERE (  `iduser` = 4  AND `anjian_status` = 3 ) AND `anjian_user_view`.`delete_time` IS NULL ORDER BY `idanjian` ASC [ RunTime:0.001572s ]
+---------------------------------------------------------------
+[ 2019-05-18T10:35:28+08:00 ] 192.168.101.137 POST 172.16.101.22/jishi/jishi.list
+[运行时间：0.078919s] [吞吐率：12.67req/s] [内存消耗：1,467.79kb] [文件加载：90]
+[ info ] [ LANG ] /var/www/manager_cmlaw/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'jishi/jishi.list',
+  'route' => 'api/jishi/jishi_list',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'method' => 'get|post',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '172.16.101.22',
+  'connection' => 'keep-alive',
+  'content-length' => '58',
+  'accept' => 'application/json, text/plain, */*',
+  'origin' => 'http://172.16.101.22',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36',
+  'content-type' => 'application/json;charset=UTF-8',
+  'referer' => 'http://172.16.101.22/zhangdan-guanli/zhangdan-jishi',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=0uu02npet89l4cae06211jr9ap; USERID=4; USERREALNAME=%E4%BB%BB%E5%B0%8F%E6%9B%BC',
+)
+[ info ] [ PARAM ] array (
+  'page' => 1,
+  'tiaoshu' => 10,
+  'is_shiyong' => '1',
+  'jishi_status' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000993s ] mysql:host=172.16.101.20;port=3306;dbname=lawyer_cmlaw;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.000892s ]
+[ sql ] [ SQL ] SELECT `groupid` FROM `auth_group_access` WHERE (  `userid` = 4 ) AND `auth_group_access`.`delete_time` IS NULL [ RunTime:0.000610s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group` [ RunTime:0.000913s ]
+[ sql ] [ SQL ] SELECT `rules` FROM `auth_group` WHERE (  `id` IN (174) ) AND `auth_group`.`delete_time` IS NULL [ RunTime:0.000614s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_rule` [ RunTime:0.000877s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_rule` WHERE  `id` IN (9,10,11,22,23,97,99,134,138,139,135,136,137,15,115,141,117,118,119,156,124,125,120,121,122,142,143,144,145,146,147,123,148,126,127,149,150,128,151,129,130,152,131,132,140,133,153,154,155,157,159,160,161,162,163,158,164,165,166,167,168)  AND `ruleid` = 0  AND `type` = 1 ORDER BY `paixun` DESC [ RunTime:0.001038s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_rule` WHERE  `id` IN (9,10,11,22,23,97,99,134,138,139,135,136,137,15,115,141,117,118,119,156,124,125,120,121,122,142,143,144,145,146,147,123,148,126,127,149,150,128,151,129,130,152,131,132,140,133,153,154,155,157,159,160,161,162,163,158,164,165,166,167,168)  AND `title` = 'jishi/jishi_list' LIMIT 1 [ RunTime:0.000873s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_rule` WHERE  `id` IN (9,10,11,22,23,97,99,134,138,139,135,136,137,15,115,141,117,118,119,156,124,125,120,121,122,142,143,144,145,146,147,123,148,126,127,149,150,128,151,129,130,152,131,132,140,133,153,154,155,157,159,160,161,162,163,158,164,165,166,167,168)  AND `ruleid` IS NULL  AND `type` = 1 ORDER BY `paixun` DESC [ RunTime:0.000783s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_view` [ RunTime:0.001408s ]
+[ sql ] [ SQL ] SELECT * FROM `user_view` WHERE (  `iduser` = 4 ) AND `user_view`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.001135s ]
+[ sql ] [ SQL ] SELECT * FROM `user_view` WHERE (  `iduser` = 4 ) AND `user_view`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.001020s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `anjian_has_user` [ RunTime:0.000833s ]
+[ sql ] [ SQL ] SELECT `anjianid` FROM `anjian_has_user` WHERE (  `userid` = 4 ) AND `anjian_has_user`.`delete_time` IS NULL [ RunTime:0.001217s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jishi_view` [ RunTime:0.001771s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jishi_view` WHERE (  `idanjian` IN (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,137,138,139,140,141,20,145,147,151,155,156,157,158,159,160,163,172,136,176,182,183,184,185,186,189,190,171,211,216,219,222,248,252,255,256,257,258,269,271,270,274,275,277,279,280,281,282,283,284,285,286,287,294,304,306,316,323,332,333,334,336,337,338,344,345,346,324,358,359,360,361,363,364,365,366,369,371,373,387,391,191,394,395,396,401,403,80,370,410,413,415,418,420,422,423,424,425,426,427,428,429,430,432,434,435,436,437,433,441,440,445,462,439,438,446,444,431,442,463,476,477,443,478,479,481,480,483,482,484,485,486,489,493)  AND `is_shiyong` LIKE %1% ) AND `jishi_view`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.003210s ]
+[ sql ] [ SQL ] SELECT `idjishi`,`jishi_number`,`jishi_start_date`,`jishi_end_date`,`jishi_jiezhi_date`,`jishi_content`,`jishi_status`,`is_shiyong`,`add_userid`,`add_user_realname`,`idanjian`,`anjian_title` FROM `jishi_view` WHERE (  `idanjian` IN (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,137,138,139,140,141,20,145,147,151,155,156,157,158,159,160,163,172,136,176,182,183,184,185,186,189,190,171,211,216,219,222,248,252,255,256,257,258,269,271,270,274,275,277,279,280,281,282,283,284,285,286,287,294,304,306,316,323,332,333,334,336,337,338,344,345,346,324,358,359,360,361,363,364,365,366,369,371,373,387,391,191,394,395,396,401,403,80,370,410,413,415,418,420,422,423,424,425,426,427,428,429,430,432,434,435,436,437,433,441,440,445,462,439,438,446,444,431,442,463,476,477,443,478,479,481,480,483,482,484,485,486,489,493)  AND `is_shiyong` LIKE %1% ) AND `jishi_view`.`delete_time` IS NULL ORDER BY `idjishi` DESC LIMIT 0,10 [ RunTime:0.003270s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jishi_view` WHERE (  `idanjian` IN (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,137,138,139,140,141,20,145,147,151,155,156,157,158,159,160,163,172,136,176,182,183,184,185,186,189,190,171,211,216,219,222,248,252,255,256,257,258,269,271,270,274,275,277,279,280,281,282,283,284,285,286,287,294,304,306,316,323,332,333,334,336,337,338,344,345,346,324,358,359,360,361,363,364,365,366,369,371,373,387,391,191,394,395,396,401,403,80,370,410,413,415,418,420,422,423,424,425,426,427,428,429,430,432,434,435,436,437,433,441,440,445,462,439,438,446,444,431,442,463,476,477,443,478,479,481,480,483,482,484,485,486,489,493)  AND `is_shiyong` = 1 ) AND `jishi_view`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.002957s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jishi_view` WHERE (  `idanjian` IN (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,137,138,139,140,141,20,145,147,151,155,156,157,158,159,160,163,172,136,176,182,183,184,185,186,189,190,171,211,216,219,222,248,252,255,256,257,258,269,271,270,274,275,277,279,280,281,282,283,284,285,286,287,294,304,306,316,323,332,333,334,336,337,338,344,345,346,324,358,359,360,361,363,364,365,366,369,371,373,387,391,191,394,395,396,401,403,80,370,410,413,415,418,420,422,423,424,425,426,427,428,429,430,432,434,435,436,437,433,441,440,445,462,439,438,446,444,431,442,463,476,477,443,478,479,481,480,483,482,484,485,486,489,493)  AND `is_shiyong` = 2 ) AND `jishi_view`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.002834s ]
+---------------------------------------------------------------
+[ 2019-05-18T10:35:31+08:00 ] 192.168.101.137 POST 172.16.101.22/quanxian/is.quanxian
+[运行时间：0.021714s] [吞吐率：46.05req/s] [内存消耗：1,140.32kb] [文件加载：87]
+[ info ] [ LANG ] /var/www/manager_cmlaw/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'quanxian/is.quanxian',
+  'route' => 'api/quanxian/isQuanxian',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'method' => 'get|post',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '172.16.101.22',
+  'connection' => 'keep-alive',
+  'content-length' => '42',
+  'accept' => 'application/json, text/plain, */*',
+  'origin' => 'http://172.16.101.22',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36',
+  'content-type' => 'application/json;charset=UTF-8',
+  'referer' => 'http://172.16.101.22/zhangdan-guanli/zhangdan-guanli',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=0uu02npet89l4cae06211jr9ap; USERID=4; USERREALNAME=%E4%BB%BB%E5%B0%8F%E6%9B%BC',
+)
+[ info ] [ PARAM ] array (
+  'url' => '/zhangdan-guanli/zhangdan-guanli',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001526s ] mysql:host=172.16.101.20;port=3306;dbname=lawyer_cmlaw;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.001083s ]
+[ sql ] [ SQL ] SELECT `groupid` FROM `auth_group_access` WHERE (  `userid` = 4 ) AND `auth_group_access`.`delete_time` IS NULL [ RunTime:0.000763s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group` [ RunTime:0.000947s ]
+[ sql ] [ SQL ] SELECT `rules` FROM `auth_group` WHERE (  `id` IN (174) ) AND `auth_group`.`delete_time` IS NULL [ RunTime:0.000601s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_rule` [ RunTime:0.000965s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_rule` WHERE  `id` IN (9,10,11,22,23,97,99,134,138,139,135,136,137,15,115,141,117,118,119,156,124,125,120,121,122,142,143,144,145,146,147,123,148,126,127,149,150,128,151,129,130,152,131,132,140,133,153,154,155,157,159,160,161,162,163,158,164,165,166,167,168)  AND `ruleid` = 0  AND `type` = 1 ORDER BY `paixun` DESC [ RunTime:0.001068s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_rule` WHERE  `id` IN (9,10,11,22,23,97,99,134,138,139,135,136,137,15,115,141,117,118,119,156,124,125,120,121,122,142,143,144,145,146,147,123,148,126,127,149,150,128,151,129,130,152,131,132,140,133,153,154,155,157,159,160,161,162,163,158,164,165,166,167,168)  AND `title` = 'quanxian/isquanxian' LIMIT 1 [ RunTime:0.000913s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_rule` WHERE  `id` IN (9,10,11,22,23,97,99,134,138,139,135,136,137,15,115,141,117,118,119,156,124,125,120,121,122,142,143,144,145,146,147,123,148,126,127,149,150,128,151,129,130,152,131,132,140,133,153,154,155,157,159,160,161,162,163,158,164,165,166,167,168)  AND `ruleid` IS NULL  AND `type` = 1 ORDER BY `paixun` DESC [ RunTime:0.000792s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_view` [ RunTime:0.001456s ]
+[ sql ] [ SQL ] SELECT * FROM `user_view` WHERE (  `iduser` = 4 ) AND `user_view`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.001115s ]
+[ sql ] [ SQL ] SELECT * FROM `user_view` WHERE (  `iduser` = 4 ) AND `user_view`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.001051s ]
+[ sql ] [ SQL ] SELECT `id` FROM `auth_rule` WHERE (  `title` = '/zhangdan-guanli/zhangdan-guanli' ) AND `auth_rule`.`delete_time` IS NULL [ RunTime:0.000670s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_group` WHERE (  `status` = 1 ) AND `auth_group`.`delete_time` IS NULL [ RunTime:0.000689s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_group_access` WHERE (  `groupid` IN (1,173,174)  AND `userid` = 4 ) AND `auth_group_access`.`delete_time` IS NULL [ RunTime:0.000643s ]
+---------------------------------------------------------------
+[ 2019-05-18T10:35:31+08:00 ] 192.168.101.137 POST 172.16.101.22/user/hehuoren.list
+[运行时间：0.032568s] [吞吐率：30.71req/s] [内存消耗：1,153.00kb] [文件加载：86]
+[ info ] [ LANG ] /var/www/manager_cmlaw/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'user/hehuoren.list',
+  'route' => 'api/user/hehuoren_list',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'method' => 'get|post',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '172.16.101.22',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => 'application/json, text/plain, */*',
+  'origin' => 'http://172.16.101.22',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36',
+  'referer' => 'http://172.16.101.22/zhangdan-guanli/zhangdan-guanli',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=0uu02npet89l4cae06211jr9ap; USERID=4; USERREALNAME=%E4%BB%BB%E5%B0%8F%E6%9B%BC',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000928s ] mysql:host=172.16.101.20;port=3306;dbname=lawyer_cmlaw;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.000917s ]
+[ sql ] [ SQL ] SELECT `groupid` FROM `auth_group_access` WHERE (  `userid` = 4 ) AND `auth_group_access`.`delete_time` IS NULL [ RunTime:0.000607s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group` [ RunTime:0.000894s ]
+[ sql ] [ SQL ] SELECT `rules` FROM `auth_group` WHERE (  `id` IN (174) ) AND `auth_group`.`delete_time` IS NULL [ RunTime:0.000572s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_rule` [ RunTime:0.000877s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_rule` WHERE  `id` IN (9,10,11,22,23,97,99,134,138,139,135,136,137,15,115,141,117,118,119,156,124,125,120,121,122,142,143,144,145,146,147,123,148,126,127,149,150,128,151,129,130,152,131,132,140,133,153,154,155,157,159,160,161,162,163,158,164,165,166,167,168)  AND `ruleid` = 0  AND `type` = 1 ORDER BY `paixun` DESC [ RunTime:0.001022s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_rule` WHERE  `id` IN (9,10,11,22,23,97,99,134,138,139,135,136,137,15,115,141,117,118,119,156,124,125,120,121,122,142,143,144,145,146,147,123,148,126,127,149,150,128,151,129,130,152,131,132,140,133,153,154,155,157,159,160,161,162,163,158,164,165,166,167,168)  AND `title` = 'user/hehuoren_list' LIMIT 1 [ RunTime:0.000882s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_rule` WHERE  `id` IN (9,10,11,22,23,97,99,134,138,139,135,136,137,15,115,141,117,118,119,156,124,125,120,121,122,142,143,144,145,146,147,123,148,126,127,149,150,128,151,129,130,152,131,132,140,133,153,154,155,157,159,160,161,162,163,158,164,165,166,167,168)  AND `ruleid` IS NULL  AND `type` = 1 ORDER BY `paixun` DESC [ RunTime:0.000768s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_view` [ RunTime:0.001365s ]
+[ sql ] [ SQL ] SELECT * FROM `user_view` WHERE (  `iduser` = 4 ) AND `user_view`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.001084s ]
+[ sql ] [ SQL ] SELECT * FROM `user_view` WHERE (  `iduser` = 4 ) AND `user_view`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.001019s ]
+[ sql ] [ SQL ] SELECT `iduser`,`user_realname`,`bumen_name` FROM `user_view` WHERE (  `idzhiwei` = 2 ) AND `user_view`.`delete_time` IS NULL [ RunTime:0.000898s ]
+---------------------------------------------------------------
+[ 2019-05-18T10:35:31+08:00 ] 192.168.101.137 POST 172.16.101.22/zhangdan/zhangdan.list
+[运行时间：0.063040s] [吞吐率：15.86req/s] [内存消耗：1,483.99kb] [文件加载：91]
+[ info ] [ LANG ] /var/www/manager_cmlaw/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'zhangdan/zhangdan.list',
+  'route' => 'api/zhangdan/zhangdan_list',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'method' => 'get|post',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '172.16.101.22',
+  'connection' => 'keep-alive',
+  'content-length' => '63',
+  'accept' => 'application/json, text/plain, */*',
+  'origin' => 'http://172.16.101.22',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36',
+  'content-type' => 'application/json;charset=UTF-8',
+  'referer' => 'http://172.16.101.22/zhangdan-guanli/zhangdan-guanli',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=0uu02npet89l4cae06211jr9ap; USERID=4; USERREALNAME=%E4%BB%BB%E5%B0%8F%E6%9B%BC',
+)
+[ info ] [ PARAM ] array (
+  'tiaoshu' => 10,
+  'zhangdan_status' => '1',
+  'page' => 1,
+  'type' => 'zhangdan',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000952s ] mysql:host=172.16.101.20;port=3306;dbname=lawyer_cmlaw;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.000921s ]
+[ sql ] [ SQL ] SELECT `groupid` FROM `auth_group_access` WHERE (  `userid` = 4 ) AND `auth_group_access`.`delete_time` IS NULL [ RunTime:0.000617s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group` [ RunTime:0.000941s ]
+[ sql ] [ SQL ] SELECT `rules` FROM `auth_group` WHERE (  `id` IN (174) ) AND `auth_group`.`delete_time` IS NULL [ RunTime:0.000636s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_rule` [ RunTime:0.000915s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_rule` WHERE  `id` IN (9,10,11,22,23,97,99,134,138,139,135,136,137,15,115,141,117,118,119,156,124,125,120,121,122,142,143,144,145,146,147,123,148,126,127,149,150,128,151,129,130,152,131,132,140,133,153,154,155,157,159,160,161,162,163,158,164,165,166,167,168)  AND `ruleid` = 0  AND `type` = 1 ORDER BY `paixun` DESC [ RunTime:0.001144s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_rule` WHERE  `id` IN (9,10,11,22,23,97,99,134,138,139,135,136,137,15,115,141,117,118,119,156,124,125,120,121,122,142,143,144,145,146,147,123,148,126,127,149,150,128,151,129,130,152,131,132,140,133,153,154,155,157,159,160,161,162,163,158,164,165,166,167,168)  AND `title` = 'zhangdan/zhangdan_list' LIMIT 1 [ RunTime:0.000954s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_rule` WHERE  `id` IN (9,10,11,22,23,97,99,134,138,139,135,136,137,15,115,141,117,118,119,156,124,125,120,121,122,142,143,144,145,146,147,123,148,126,127,149,150,128,151,129,130,152,131,132,140,133,153,154,155,157,159,160,161,162,163,158,164,165,166,167,168)  AND `ruleid` IS NULL  AND `type` = 1 ORDER BY `paixun` DESC [ RunTime:0.000807s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_view` [ RunTime:0.001487s ]
+[ sql ] [ SQL ] SELECT * FROM `user_view` WHERE (  `iduser` = 4 ) AND `user_view`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.001150s ]
+[ sql ] [ SQL ] SELECT * FROM `user_view` WHERE (  `iduser` = 4 ) AND `user_view`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.001074s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `anjian_has_user` [ RunTime:0.000849s ]
+[ sql ] [ SQL ] SELECT `anjianid` FROM `anjian_has_user` WHERE (  `userid` = 4 ) AND `anjian_has_user`.`delete_time` IS NULL [ RunTime:0.001275s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zhangdan_1_view` [ RunTime:0.001574s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zhangdan_1_view` WHERE (  `zhangdan_status` LIKE %1%  AND `idanjian` IN (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,137,138,139,140,141,20,145,147,151,155,156,157,158,159,160,163,172,136,176,182,183,184,185,186,189,190,171,211,216,219,222,248,252,255,256,257,258,269,271,270,274,275,277,279,280,281,282,283,284,285,286,287,294,304,306,316,323,332,333,334,336,337,338,344,345,346,324,358,359,360,361,363,364,365,366,369,371,373,387,391,191,394,395,396,401,403,80,370,410,413,415,418,420,422,423,424,425,426,427,428,429,430,432,434,435,436,437,433,441,440,445,462,439,438,446,444,431,442,463,476,477,443,478,479,481,480,483,482,484,485,486,489,493)  AND ( `add_userid` = 4 OR `iduser` = 4 ) ) AND `zhangdan_1_view`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.002810s ]
+[ sql ] [ SQL ] SELECT `idzhangdan`,`zhangdan_number`,`zhangdan_type`,`zhangdan_bizhong`,`zhangdan_date`,`zhangdan_money`,`zhangdan_status`,`user_realname`,`idanjian`,`anjian_number`,`anjian_title`,`create_time`,`zhangdan_jindu`,`zhangdan_fapiao` FROM `zhangdan_1_view` WHERE (  `zhangdan_status` LIKE %1%  AND `idanjian` IN (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,137,138,139,140,141,20,145,147,151,155,156,157,158,159,160,163,172,136,176,182,183,184,185,186,189,190,171,211,216,219,222,248,252,255,256,257,258,269,271,270,274,275,277,279,280,281,282,283,284,285,286,287,294,304,306,316,323,332,333,334,336,337,338,344,345,346,324,358,359,360,361,363,364,365,366,369,371,373,387,391,191,394,395,396,401,403,80,370,410,413,415,418,420,422,423,424,425,426,427,428,429,430,432,434,435,436,437,433,441,440,445,462,439,438,446,444,431,442,463,476,477,443,478,479,481,480,483,482,484,485,486,489,493)  AND ( `add_userid` = 4 OR `iduser` = 4 ) ) AND `zhangdan_1_view`.`delete_time` IS NULL ORDER BY `idzhangdan` DESC LIMIT 0,10 [ RunTime:0.002989s ]
+[ sql ] [ SQL ] SELECT zhangdan_status as status,count(*) as sum FROM `zhangdan_1_view` WHERE (  `idanjian` IN (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,137,138,139,140,141,20,145,147,151,155,156,157,158,159,160,163,172,136,176,182,183,184,185,186,189,190,171,211,216,219,222,248,252,255,256,257,258,269,271,270,274,275,277,279,280,281,282,283,284,285,286,287,294,304,306,316,323,332,333,334,336,337,338,344,345,346,324,358,359,360,361,363,364,365,366,369,371,373,387,391,191,394,395,396,401,403,80,370,410,413,415,418,420,422,423,424,425,426,427,428,429,430,432,434,435,436,437,433,441,440,445,462,439,438,446,444,431,442,463,476,477,443,478,479,481,480,483,482,484,485,486,489,493)  AND ( `add_userid` = 4 OR `iduser` = 4 ) ) AND `zhangdan_1_view`.`delete_time` IS NULL GROUP BY `zhangdan_status` [ RunTime:0.002730s ]
+---------------------------------------------------------------
+[ 2019-05-18T10:35:31+08:00 ] 192.168.101.137 POST 172.16.101.22/anjian/anjian.list
+[运行时间：0.057000s] [吞吐率：17.54req/s] [内存消耗：1,188.83kb] [文件加载：87]
+[ info ] [ LANG ] /var/www/manager_cmlaw/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'anjian/anjian.list',
+  'route' => 'api/anjian/anjian_list',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'method' => 'get|post',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '172.16.101.22',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => 'application/json, text/plain, */*',
+  'origin' => 'http://172.16.101.22',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36',
+  'referer' => 'http://172.16.101.22/zhangdan-guanli/zhangdan-guanli',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=0uu02npet89l4cae06211jr9ap; USERID=4; USERREALNAME=%E4%BB%BB%E5%B0%8F%E6%9B%BC',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000992s ] mysql:host=172.16.101.20;port=3306;dbname=lawyer_cmlaw;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.001067s ]
+[ sql ] [ SQL ] SELECT `groupid` FROM `auth_group_access` WHERE (  `userid` = 4 ) AND `auth_group_access`.`delete_time` IS NULL [ RunTime:0.000684s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group` [ RunTime:0.000935s ]
+[ sql ] [ SQL ] SELECT `rules` FROM `auth_group` WHERE (  `id` IN (174) ) AND `auth_group`.`delete_time` IS NULL [ RunTime:0.000624s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_rule` [ RunTime:0.000884s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_rule` WHERE  `id` IN (9,10,11,22,23,97,99,134,138,139,135,136,137,15,115,141,117,118,119,156,124,125,120,121,122,142,143,144,145,146,147,123,148,126,127,149,150,128,151,129,130,152,131,132,140,133,153,154,155,157,159,160,161,162,163,158,164,165,166,167,168)  AND `ruleid` = 0  AND `type` = 1 ORDER BY `paixun` DESC [ RunTime:0.001021s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_rule` WHERE  `id` IN (9,10,11,22,23,97,99,134,138,139,135,136,137,15,115,141,117,118,119,156,124,125,120,121,122,142,143,144,145,146,147,123,148,126,127,149,150,128,151,129,130,152,131,132,140,133,153,154,155,157,159,160,161,162,163,158,164,165,166,167,168)  AND `title` = 'anjian/anjian_list' LIMIT 1 [ RunTime:0.000954s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_rule` WHERE  `id` IN (9,10,11,22,23,97,99,134,138,139,135,136,137,15,115,141,117,118,119,156,124,125,120,121,122,142,143,144,145,146,147,123,148,126,127,149,150,128,151,129,130,152,131,132,140,133,153,154,155,157,159,160,161,162,163,158,164,165,166,167,168)  AND `ruleid` IS NULL  AND `type` = 1 ORDER BY `paixun` DESC [ RunTime:0.000787s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_view` [ RunTime:0.001449s ]
+[ sql ] [ SQL ] SELECT * FROM `user_view` WHERE (  `iduser` = 4 ) AND `user_view`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.001052s ]
+[ sql ] [ SQL ] SELECT * FROM `user_view` WHERE (  `iduser` = 4 ) AND `user_view`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.001028s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `anjian_user_view` [ RunTime:0.001549s ]
+[ sql ] [ SQL ] SELECT `idanjian`,`anjian_number`,`anjian_title`,`anjian_date`,`anjian_status`,`fensuo_name`,`zhonglei_name`,`idkehu`,`kehu_name` FROM `anjian_user_view` WHERE (  `iduser` = 4  AND `anjian_status` = 3 ) AND `anjian_user_view`.`delete_time` IS NULL ORDER BY `idanjian` ASC [ RunTime:0.001627s ]
+---------------------------------------------------------------
+[ 2019-05-18T14:49:22+08:00 ] 192.168.101.132 GET 172.16.101.22/
+[运行时间：0.088241s] [吞吐率：11.33req/s] [内存消耗：1,488.30kb] [文件加载：86]
+[ info ] [ LANG ] /var/www/manager_cmlaw/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => '172.16.101.22',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001950s ] mysql:host=172.16.101.20;port=3306;dbname=lawyer_cmlaw;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.001121s ]
+[ sql ] [ SQL ] SELECT `groupid` FROM `auth_group_access` WHERE (  `userid` IS NULL ) AND `auth_group_access`.`delete_time` IS NULL [ RunTime:0.000553s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group` [ RunTime:0.000903s ]
+[ sql ] [ SQL ] SELECT `rules` FROM `auth_group` WHERE (  `id` IN ('') ) AND `auth_group`.`delete_time` IS NULL [ RunTime:0.000572s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_rule` [ RunTime:0.000941s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_rule` WHERE  `id` IN (0)  AND `ruleid` = 0  AND `type` = 1 ORDER BY `paixun` DESC [ RunTime:0.000666s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_rule` WHERE  `id` IN (0)  AND `title` = 'index/index' LIMIT 1 [ RunTime:0.000617s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_rule` WHERE  `id` IN (0)  AND `ruleid` IS NULL  AND `type` = 1 ORDER BY `paixun` DESC [ RunTime:0.000610s ]
+---------------------------------------------------------------
+[ 2019-05-18T14:49:22+08:00 ] 192.168.101.132 GET 172.16.101.22/home/login/
+[运行时间：0.004769s] [吞吐率：209.68req/s] [内存消耗：771.95kb] [文件加载：64]
+[ info ] [ LANG ] /var/www/manager_cmlaw/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => '172.16.101.22',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=d8brta25upo9ubeb010svv8teq',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] /var/www/manager_cmlaw/application/home/view/login/login-1.html [ array (
+) ]
+---------------------------------------------------------------
+[ 2019-05-18T16:33:33+08:00 ] 192.168.101.138 GET 172.16.101.22/
+[运行时间：0.022577s] [吞吐率：44.29req/s] [内存消耗：1,090.34kb] [文件加载：86]
+[ info ] [ LANG ] /var/www/manager_cmlaw/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => '172.16.101.22',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.157 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002063s ] mysql:host=172.16.101.20;port=3306;dbname=lawyer_cmlaw;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.001479s ]
+[ sql ] [ SQL ] SELECT `groupid` FROM `auth_group_access` WHERE (  `userid` IS NULL ) AND `auth_group_access`.`delete_time` IS NULL [ RunTime:0.000687s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group` [ RunTime:0.001015s ]
+[ sql ] [ SQL ] SELECT `rules` FROM `auth_group` WHERE (  `id` IN ('') ) AND `auth_group`.`delete_time` IS NULL [ RunTime:0.000688s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_rule` [ RunTime:0.001029s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_rule` WHERE  `id` IN (0)  AND `ruleid` = 0  AND `type` = 1 ORDER BY `paixun` DESC [ RunTime:0.000689s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_rule` WHERE  `id` IN (0)  AND `title` = 'index/index' LIMIT 1 [ RunTime:0.000673s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_rule` WHERE  `id` IN (0)  AND `ruleid` IS NULL  AND `type` = 1 ORDER BY `paixun` DESC [ RunTime:0.000677s ]
+---------------------------------------------------------------
+[ 2019-05-18T16:33:33+08:00 ] 192.168.101.138 GET 172.16.101.22/home/login/
+[运行时间：0.004064s] [吞吐率：246.07req/s] [内存消耗：770.92kb] [文件加载：64]
+[ info ] [ LANG ] /var/www/manager_cmlaw/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => '172.16.101.22',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.157 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'PHPSESSID=0pl03r8l1iudos0n658bdf0aib',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] /var/www/manager_cmlaw/application/home/view/login/login-1.html [ array (
+) ]

@@ -1,0 +1,4 @@
+<?php
+//000000000000
+ exit();?>
+<option value="">请选择工作类型</option><optgroup label="资本市场业务、私募投融资"><option value="5">差旅在途时间</option><option value="6">现场会议</option><option value="7">电话会议</option><option value="8">尽职调查</option><option value="9">法律文件起草</option><option value="10">法律文件审阅</option><option value="11">法律意见</option><option value="12">日常外部沟通（邮件/电话/微信）</option><option value="13">内部沟通</option><option value="14">签约</option><option value="15">交割</option><option value="16">交割后事项</option><option value="17">翻译</option></optgroup><optgroup label="争议解决"><option value="18">差旅在途时间</option><option value="19">律师会见</option><option value="20">办案机关现场（如提交证据材料、查阅、分析案卷材料）</option><option value="21">庭审现场</option><option value="22">法律文书起草</option><option value="23">日常外部沟通（邮件电话微信）</option><option value="24">内部沟通</option></optgroup>

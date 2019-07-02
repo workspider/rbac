@@ -1,0 +1,4 @@
+<?php
+//000000000000
+ exit();?>
+<option value="">请选择工作类型</option><optgroup label="市场开拓"><option value="25">差旅在途时间</option><option value="26">商务会谈</option><option value="27">出席活动</option><option value="28">商务宴请</option><option value="29">上市仪式及晚宴</option><option value="30">制作投标文件</option></optgroup><optgroup label="其他非营利事项"><option value="31">财务事务（如制作/跟进账单、法律服务合同、发票、收款、报销等）</option><option value="32">行政事务（如制作/跟进人事管理、劳动合同、事务所制度、招聘/面试等）</option><option value="33">知识管理（如制作标准文本、总结法律更新等）</option><option value="34">法律研究</option><option value="35">公共假期</option><option value="36">年假</option><option value="37">事假</option><option value="38">病假</option></optgroup>
