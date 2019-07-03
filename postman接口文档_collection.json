@@ -1,0 +1,912 @@
+{
+	"info": {
+		"_postman_id": "9338e7e1-9d0b-4afb-9c70-471603a2c102",
+		"name": "RBAC权限管理",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "用户",
+			"item": [
+				{
+					"name": "用户列表",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "172.16.101.22/admin/user/user_list",
+							"host": [
+								"172",
+								"16",
+								"101",
+								"22"
+							],
+							"path": [
+								"admin",
+								"user",
+								"user_list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "给用户分角色",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "172.16.101.22/admin/user_role/user_role_save?uid=4&rid=41&category=2",
+							"host": [
+								"172",
+								"16",
+								"101",
+								"22"
+							],
+							"path": [
+								"admin",
+								"user_role",
+								"user_role_save"
+							],
+							"query": [
+								{
+									"key": "uid",
+									"value": "4"
+								},
+								{
+									"key": "rid",
+									"value": "41"
+								},
+								{
+									"key": "category",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "给角色分节点",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "172.16.101.22/admin/role_node/role_node_save?rid=41&nid=254,256,257,258,259,260,261,262,263,264,265,266,267,268,269,270,271,272,273,274,275,276,277,278,279,280,281,282,283,284,285,286,287,288,289,290&category=2",
+							"host": [
+								"172",
+								"16",
+								"101",
+								"22"
+							],
+							"path": [
+								"admin",
+								"role_node",
+								"role_node_save"
+							],
+							"query": [
+								{
+									"key": "rid",
+									"value": "41"
+								},
+								{
+									"key": "nid",
+									"value": "254,256,257,258,259,260,261,262,263,264,265,266,267,268,269,270,271,272,273,274,275,276,277,278,279,280,281,282,283,284,285,286,287,288,289,290"
+								},
+								{
+									"key": "category",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "检查用户访问权限",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://172.16.101.22/admin/user/user_permission?uid=1&url=admin/index",
+							"protocol": "http",
+							"host": [
+								"172",
+								"16",
+								"101",
+								"22"
+							],
+							"path": [
+								"admin",
+								"user",
+								"user_permission"
+							],
+							"query": [
+								{
+									"key": "uid",
+									"value": "1"
+								},
+								{
+									"key": "url",
+									"value": "admin/index"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "给角色分节点2222",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "172.16.101.22/admin/role_node/role_node_save1?rid=45&add_nid=254,255,256,257,258,259,260,261,262,263,264,265,266,267,268,269,270,271,272,273,274,275,276,277,278,279,280,281,282,283,284,285,286,287,288,289,290&category=2&del_nid=",
+							"host": [
+								"172",
+								"16",
+								"101",
+								"22"
+							],
+							"path": [
+								"admin",
+								"role_node",
+								"role_node_save1"
+							],
+							"query": [
+								{
+									"key": "rid",
+									"value": "45"
+								},
+								{
+									"key": "add_nid",
+									"value": "254,255,256,257,258,259,260,261,262,263,264,265,266,267,268,269,270,271,272,273,274,275,276,277,278,279,280,281,282,283,284,285,286,287,288,289,290"
+								},
+								{
+									"key": "category",
+									"value": "2"
+								},
+								{
+									"key": "del_nid",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "获取角色待添加用户",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "172.16.101.22/admin/user_role/user_list?rid=1000",
+							"host": [
+								"172",
+								"16",
+								"101",
+								"22"
+							],
+							"path": [
+								"admin",
+								"user_role",
+								"user_list"
+							],
+							"query": [
+								{
+									"key": "rid",
+									"value": "1000"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "给角色加用户(新增)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "172.16.101.22/admin/user_role/role_user_add?rid=1000&uid=1,2,3&category=2",
+							"host": [
+								"172",
+								"16",
+								"101",
+								"22"
+							],
+							"path": [
+								"admin",
+								"user_role",
+								"role_user_add"
+							],
+							"query": [
+								{
+									"key": "rid",
+									"value": "1000"
+								},
+								{
+									"key": "uid",
+									"value": "1,2,3"
+								},
+								{
+									"key": "category",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "角色下的所有用户列表",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "172.16.101.22/admin/user_role/role_user_list?rid=40",
+							"host": [
+								"172",
+								"16",
+								"101",
+								"22"
+							],
+							"path": [
+								"admin",
+								"user_role",
+								"role_user_list"
+							],
+							"query": [
+								{
+									"key": "rid",
+									"value": "40"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "删除角色下的用户",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "172.16.101.22/admin/user_role/user_delete?ruid=118&=",
+							"host": [
+								"172",
+								"16",
+								"101",
+								"22"
+							],
+							"path": [
+								"admin",
+								"user_role",
+								"user_delete"
+							],
+							"query": [
+								{
+									"key": "ruid",
+									"value": "118"
+								},
+								{
+									"key": "",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "角色",
+			"item": [
+				{
+					"name": "角色列表",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "172.16.101.22/admin/role/role_list?rid=",
+							"host": [
+								"172",
+								"16",
+								"101",
+								"22"
+							],
+							"path": [
+								"admin",
+								"role",
+								"role_list"
+							],
+							"query": [
+								{
+									"key": "rid",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "角色增加",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "172.16.101.22/admin/role/role_add?title=测试&status=1&desc=测试&category=2&sort=5",
+							"host": [
+								"172",
+								"16",
+								"101",
+								"22"
+							],
+							"path": [
+								"admin",
+								"role",
+								"role_add"
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": "测试"
+								},
+								{
+									"key": "status",
+									"value": "1"
+								},
+								{
+									"key": "desc",
+									"value": "测试"
+								},
+								{
+									"key": "category",
+									"value": "2"
+								},
+								{
+									"key": "sort",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "角色更新",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "172.16.101.22/admin/role/role_update?title=qwer&desc=qwer&rid=13&category=2",
+							"host": [
+								"172",
+								"16",
+								"101",
+								"22"
+							],
+							"path": [
+								"admin",
+								"role",
+								"role_update"
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": "qwer"
+								},
+								{
+									"key": "desc",
+									"value": "qwer"
+								},
+								{
+									"key": "rid",
+									"value": "13"
+								},
+								{
+									"key": "category",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "角色删除",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "172.16.101.22/admin/role/role_delete?rid=39",
+							"host": [
+								"172",
+								"16",
+								"101",
+								"22"
+							],
+							"path": [
+								"admin",
+								"role",
+								"role_delete"
+							],
+							"query": [
+								{
+									"key": "rid",
+									"value": "39"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "权限节点",
+			"item": [
+				{
+					"name": "节点列表",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://172.16.101.22/admin/node/node_list?id=&rid=41",
+							"protocol": "http",
+							"host": [
+								"172",
+								"16",
+								"101",
+								"22"
+							],
+							"path": [
+								"admin",
+								"node",
+								"node_list"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": ""
+								},
+								{
+									"key": "rid",
+									"value": "41"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "获取父级节点",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://172.16.101.22/admin/node/node_list_header?pid=0",
+							"protocol": "http",
+							"host": [
+								"172",
+								"16",
+								"101",
+								"22"
+							],
+							"path": [
+								"admin",
+								"node",
+								"node_list_header"
+							],
+							"query": [
+								{
+									"key": "pid",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "节点增加",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://172.16.101.22/admin/node/node_add?pid=232&sort=1&title=测试节点&node=shabi&mapping=&category=1&tag=",
+							"protocol": "http",
+							"host": [
+								"172",
+								"16",
+								"101",
+								"22"
+							],
+							"path": [
+								"admin",
+								"node",
+								"node_add"
+							],
+							"query": [
+								{
+									"key": "pid",
+									"value": "232"
+								},
+								{
+									"key": "sort",
+									"value": "1"
+								},
+								{
+									"key": "title",
+									"value": "测试节点"
+								},
+								{
+									"key": "node",
+									"value": "shabi"
+								},
+								{
+									"key": "mapping",
+									"value": ""
+								},
+								{
+									"key": "category",
+									"value": "1"
+								},
+								{
+									"key": "tag",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "节点更新",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://172.16.101.22/admin/node/node_update?nid=193&title=好烦&category=2&mapping=kai",
+							"protocol": "http",
+							"host": [
+								"172",
+								"16",
+								"101",
+								"22"
+							],
+							"path": [
+								"admin",
+								"node",
+								"node_update"
+							],
+							"query": [
+								{
+									"key": "nid",
+									"value": "193"
+								},
+								{
+									"key": "title",
+									"value": "好烦"
+								},
+								{
+									"key": "category",
+									"value": "2"
+								},
+								{
+									"key": "mapping",
+									"value": "kai"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "节点删除",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://172.16.101.22/admin/node/node_delete?nid=193",
+							"protocol": "http",
+							"host": [
+								"172",
+								"16",
+								"101",
+								"22"
+							],
+							"path": [
+								"admin",
+								"node",
+								"node_delete"
+							],
+							"query": [
+								{
+									"key": "nid",
+									"value": "193"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "节点详情",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://172.16.101.22/admin/node/node_detail?id=",
+							"protocol": "http",
+							"host": [
+								"172",
+								"16",
+								"101",
+								"22"
+							],
+							"path": [
+								"admin",
+								"node",
+								"node_detail"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "菜单",
+			"item": [
+				{
+					"name": "获取菜单列表",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "f990ff50-be72-49b0-b7dd-dfce77dceeb2",
+								"exec": [
+									"pm.environment.unset(\"variable_key\");"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "172.16.101.22/admin/menu/menu_list?uid=4&tag=1",
+							"host": [
+								"172",
+								"16",
+								"101",
+								"22"
+							],
+							"path": [
+								"admin",
+								"menu",
+								"menu_list"
+							],
+							"query": [
+								{
+									"key": "uid",
+									"value": "4"
+								},
+								{
+									"key": "tag",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "菜单更新",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "172.16.101.22/admin/menu/menu_update?mid=128&pid=0&title=啊实打实的&url=home/index/index&sort=1&category=2&type=0&status=1&tag=",
+							"host": [
+								"172",
+								"16",
+								"101",
+								"22"
+							],
+							"path": [
+								"admin",
+								"menu",
+								"menu_update"
+							],
+							"query": [
+								{
+									"key": "mid",
+									"value": "128"
+								},
+								{
+									"key": "pid",
+									"value": "0"
+								},
+								{
+									"key": "title",
+									"value": "啊实打实的"
+								},
+								{
+									"key": "url",
+									"value": "home/index/index"
+								},
+								{
+									"key": "sort",
+									"value": "1"
+								},
+								{
+									"key": "category",
+									"value": "2"
+								},
+								{
+									"key": "type",
+									"value": "0"
+								},
+								{
+									"key": "status",
+									"value": "1"
+								},
+								{
+									"key": "tag",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "菜单添加",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "172.16.101.22/admin/menu/menu_add?pid=124&title=权限管理&url=xitong/quanxian-guanli&sort=4&type=0&category=2&status=1&tag=",
+							"host": [
+								"172",
+								"16",
+								"101",
+								"22"
+							],
+							"path": [
+								"admin",
+								"menu",
+								"menu_add"
+							],
+							"query": [
+								{
+									"key": "pid",
+									"value": "124"
+								},
+								{
+									"key": "title",
+									"value": "权限管理"
+								},
+								{
+									"key": "url",
+									"value": "xitong/quanxian-guanli"
+								},
+								{
+									"key": "sort",
+									"value": "4"
+								},
+								{
+									"key": "type",
+									"value": "0"
+								},
+								{
+									"key": "category",
+									"value": "2"
+								},
+								{
+									"key": "status",
+									"value": "1"
+								},
+								{
+									"key": "tag",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "菜单删除",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "172.16.101.22/admin/menu/menu_delete?mid=128",
+							"host": [
+								"172",
+								"16",
+								"101",
+								"22"
+							],
+							"path": [
+								"admin",
+								"menu",
+								"menu_delete"
+							],
+							"query": [
+								{
+									"key": "mid",
+									"value": "128"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "菜单详情",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "172.16.101.22/admin/menu/menu_detail?mid=91",
+							"host": [
+								"172",
+								"16",
+								"101",
+								"22"
+							],
+							"path": [
+								"admin",
+								"menu",
+								"menu_detail"
+							],
+							"query": [
+								{
+									"key": "mid",
+									"value": "91"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "用户角色列表",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "172.16.101.22/admin/user_role/user_role_list",
+					"host": [
+						"172",
+						"16",
+						"101",
+						"22"
+					],
+					"path": [
+						"admin",
+						"user_role",
+						"user_role_list"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
